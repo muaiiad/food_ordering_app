@@ -3,6 +3,6 @@ module com.team.food_ordering_app {
     requires javafx.fxml;
 
 
-    opens com.team.food_ordering_app to javafx.fxml;
-    exports com.team.food_ordering_app;
+    opens app_interface to javafx.fxml;
+    exports app_interface;
 }

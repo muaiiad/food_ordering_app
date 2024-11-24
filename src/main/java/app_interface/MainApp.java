@@ -1,4 +1,4 @@
-package com.team.food_ordering_app;
+package app_interface;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
