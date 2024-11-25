@@ -1,4 +1,4 @@
-package app_system;
+package app_system.accounts;
 
 public class Admin extends Account{
 }
