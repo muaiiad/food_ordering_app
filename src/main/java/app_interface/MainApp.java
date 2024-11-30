@@ -20,7 +20,7 @@ public class MainApp extends Application {
         Scene scene = new Scene(root);
         String css = getClass().getResource("application.css").toExternalForm();
         scene.getStylesheets().add(css);
-
+        //hello
         stage.setTitle("Food Ordering App");
         stage.setScene(scene);
         stage.show();
