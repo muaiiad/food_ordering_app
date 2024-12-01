@@ -5,6 +5,8 @@ public class Menu_Item {
     private String description;
     private float price;
     private String options;
+    public  int[] reviews;
+    public int counter_reviews=0;
 
     public Menu_Item(String name, String description, float price, String options) {
         this.name = name;
