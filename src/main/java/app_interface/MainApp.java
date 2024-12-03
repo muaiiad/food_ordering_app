@@ -18,7 +18,7 @@ public class MainApp extends Application {
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("login_portal.fxml"));
         Scene scene = new Scene(root);
-        String css = getClass().getResource("application.css").toExternalForm();
+        String css = getClass().getResource("login.css").toExternalForm();
         scene.getStylesheets().add(css);
         //hello
         //123

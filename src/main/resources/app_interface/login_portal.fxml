@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@login.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.LoginController">
    <children>
-      <TextField id="text1" fx:id="passwordField" layoutX="187.0" layoutY="210.0" prefWidth="226.0" />
-      <Button id="printButton" fx:id="loginButton" layoutX="274.0" layoutY="277.0" mnemonicParsing="false" onAction="#onButtonPress" text="Login" />
-      <TextField id="text1" fx:id="emailField" layoutX="187.0" layoutY="145.0" prefWidth="226.0" />
-      <Label layoutX="187.0" layoutY="126.0" prefHeight="18.0" prefWidth="67.0" text="Email" />
-      <Label layoutX="187.0" layoutY="191.0" prefHeight="18.0" prefWidth="67.0" text="Password" />
+      <HBox prefHeight="64.0" prefWidth="600.0" styleClass="header-container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <VBox layoutX="150.0" layoutY="132.0" prefHeight="204.0" prefWidth="300.0" styleClass="login-container" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="132.0">
+         <children>
+            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" styleClass="input-field" />
+            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" styleClass="input-field" />
+            <Button fx:id="loginButton" minWidth="150.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="300.0" text="Login" />
+            <HBox alignment="CENTER" minWidth="150.0" prefHeight="22.0" prefWidth="300.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="124.0" text="Don't have an account?" />
+                  <Hyperlink onAction="#switchToSignUpPage" text="Create one." />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label alignment="CENTER" layoutX="194.0" layoutY="74.0" minWidth="150.0" prefHeight="70.0" prefWidth="212.0" text="Welcome back!" textAlignment="CENTER" AnchorPane.bottomAnchor="256.0" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="194.0" AnchorPane.topAnchor="74.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

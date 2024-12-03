@@ -1,4 +1,4 @@
-package app_system.accounts;
+package app_system.orders;
 
 public class Payment {
     private String paymentMethod;

@@ -1,0 +1,43 @@
+.header-container {
+    -fx-background-color: #E65A43;
+}
+
+
+/* login styling */
+
+.login-container {
+    -fx-spacing: 15;
+    -fx-alignment: center;
+}
+
+.login-container Button {
+    -fx-background-color: #E65A43;
+    -fx-text-fill: "white";
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 6px;
+}
+
+.login-container Button:hover {
+    -fx-background-color: #D5543F;
+}
+
+.login-container Button:pressed {
+    -fx-background-color: #E06753;
+}
+
+.input-field {
+    -fx-background-color: #DCDCDC;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+
+    -fx-prompt-text-fill: #7E7E7E;
+}
+
+.input-field:focused {
+        -fx-border-radius: 6px;
+        -fx-border-width: 2px;
+        -fx-border-color: #545454;
+}
+
+
