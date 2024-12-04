@@ -1,6 +1,7 @@
 package orders;
 
 import java.util.*;
+import app_system.restaurants.Menu_Item;
 //-------CART CLASS-------//
 public class Cart {
     private ArrayList<Cart_Item> items;
@@ -37,26 +38,27 @@ public class Cart {
         this.totalPrice = totalPrice;
     }
 
-    private float Total_price(Cart_Item items)
+
+    private float Total_price( Cart_Item[] items)
     {
-//        for(Cart_Item itr : items)
-//        {
-//            totalPrice += items.menu_item.price;
-//        }
+        for(Cart_Item itr : this.items)
+      {
+         totalPrice += itr.menu_item.getPrice();
+       }
         return totalPrice;
     }
-//   private void  Add_item( Menu_Item menu_item, int quantity )
-//
-//   {
-//        items.add(Cart_Item(Menu_Item,quantity));
-//   }
+   private void  Add_item( Cart_Item cart_item )
 
-//  private void View_cart()
-//
-//  {
-//
-//      System.out.printf("Total Price= %.2f $",totalPrice);
-//  }
+   {
+        items.add( cart_item);
+   }
+
+  private void View_cart()
+
+  {
+
+      System.out.printf("Total Price= %.2f $",totalPrice);
+  }
 
 
 

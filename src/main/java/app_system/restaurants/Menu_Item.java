@@ -19,4 +19,8 @@ public class Menu_Item {
     public float getPrice() {
         return price;
     }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
 }
