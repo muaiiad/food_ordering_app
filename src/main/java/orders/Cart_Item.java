@@ -9,6 +9,6 @@ public class Cart_Item {
 
    public Cart_Item(Menu_Item menu_item, int quantity) {
        this.menu_item = menu_item;
-     this.quantity = quantity;
+       this.quantity = quantity;
    }
 }

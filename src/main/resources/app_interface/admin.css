@@ -31,5 +31,6 @@
 
 .side .unselected:hover {
     -fx-background-color: #c24a36;
+    transition: -fx-background-color 0.5s ease;
 
 }

@@ -2,9 +2,13 @@ package app_interface;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+
+import java.io.IOException;
 
 public class AdminDashboardController {
 
@@ -20,8 +24,11 @@ public class AdminDashboardController {
     private Hyperlink ordersBtn;
     @FXML
     private Hyperlink reportsBtn;
+    @FXML
+    Pane dashPane;
 
     public void deselectAll() {
+        dashPane.getChildren().clear();
         for (Node child: sidebar.getChildren()) {
             child.getStyleClass().removeIf(style -> style.equals("selected"));
             child.getStyleClass().add("unselected");
@@ -35,10 +42,11 @@ public class AdminDashboardController {
         homeBtn.getStyleClass().add("selected");
     }
 
-    public void selectRestaurants(ActionEvent e) {
+    public void selectRestaurants(ActionEvent e) throws IOException {
         deselectAll();
         restaurantsBtn.getStyleClass().removeIf(style -> style.equals("unselected"));
         restaurantsBtn.getStyleClass().add("selected");
+        dashPane.getChildren().add(FXMLLoader.load(getClass().getResource("restaurant_dashboard.fxml")));
     }
     public void selectMenus(ActionEvent e) {
         deselectAll();

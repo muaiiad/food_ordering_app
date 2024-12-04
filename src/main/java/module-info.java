@@ -10,4 +10,5 @@ module com.team.food_ordering_app {
     exports app_interface;
     exports app_system.accounts;
     exports app_system.orders;
+    exports app_system.restaurants;
 }
