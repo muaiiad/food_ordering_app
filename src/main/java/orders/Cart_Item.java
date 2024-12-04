@@ -1,7 +1,10 @@
 package orders;
+
+import app_system.restaurants.Menu_Item;
+
 //-------CART ITEM CLASS-------//
 public class Cart_Item {
-//    public Menu_Item menu_item;
+    public Menu_Item menu_item;
 //    public int quaninty;
 //
 //    public Cart_Item(Menu_Item menu_item, int quaninty) {

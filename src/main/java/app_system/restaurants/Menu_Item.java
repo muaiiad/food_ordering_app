@@ -16,4 +16,7 @@ public class Menu_Item {
         this.options = options;
     }
 
+    public float getPrice() {
+        return price;
+    }
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1600.0" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.AdminDashboardController">
+   <children>
+      <VBox fx:id="sidebar" alignment="TOP_CENTER" layoutX="-2.0" layoutY="-2.0" prefHeight="900.0" prefWidth="280.0" styleClass="side" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Hyperlink fx:id="homeBtn" onAction="#selectHome" prefHeight="53.0" prefWidth="260.0" styleClass="selected" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="30.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fas-home" styleClass="selected" textAlignment="CENTER" wrappingWidth="40.0" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink fx:id="restaurantsBtn" onAction="#selectRestaurants" prefHeight="53.0" prefWidth="260.0" styleClass="unselected" text="Restaurants" textFill="WHITE">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="30.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="WHITE" iconLiteral="fas-store" textAlignment="CENTER" wrappingWidth="40.0" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink fx:id="menusBtn" onAction="#selectMenus" prefHeight="53.0" prefWidth="260.0" styleClass="unselected" text="Menus" textFill="WHITE">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="30.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#eeeeee" iconLiteral="fas-book-open" textAlignment="CENTER" wrappingWidth="40.0" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink fx:id="ordersBtn" onAction="#selectOrders" prefHeight="53.0" prefWidth="260.0" styleClass="unselected" text="Orders" textFill="WHITE">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="30.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#eeeeee" iconLiteral="fas-receipt:30" textAlignment="CENTER" wrappingWidth="40.0" />
+               </graphic>
+            </Hyperlink>
+            <Hyperlink fx:id="reportsBtn" onAction="#selectReports" prefHeight="53.0" prefWidth="260.0" styleClass="unselected" text="Reports" textFill="WHITE">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="30.0" />
+               </font>
+               <graphic>
+                  <FontIcon iconColor="#eeeeee" iconLiteral="far-chart-bar" textAlignment="CENTER" wrappingWidth="40.0" />
+               </graphic>
+            </Hyperlink>
+         </children>
+         <padding>
+            <Insets left="20.0" right="50.0" top="20.0" />
+         </padding>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></VBox>
+      <Pane layoutX="280.0" prefHeight="900.0" prefWidth="1320.0" />
+   </children>
+</AnchorPane>

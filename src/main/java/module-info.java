@@ -2,8 +2,9 @@ module com.team.food_ordering_app {
     requires javafx.controls;
     requires javafx.fxml;
     requires com.fasterxml.jackson.databind;
-    requires de.jensd.fx.glyphs.fontawesome;
-
+    requires org.kordamp.ikonli.core;
+    requires org.kordamp.ikonli.javafx;
+    requires org.kordamp.ikonli.fontawesome5;
 
     opens app_interface to javafx.fxml;
     exports app_interface;

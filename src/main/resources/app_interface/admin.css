@@ -1,0 +1,35 @@
+.side {
+    -fx-background-color: #E65A43;
+}
+
+.side .sidetext {
+    -fx-opacity: 5;
+}
+
+.side {
+    -fx-padding: 100 20 0 20;
+    -fx-spacing: 15;
+}
+
+.side .hyperlink {
+    -fx-border-color: transparent;
+    -fx-underline: false;
+    -fx-background-radius: 10px;
+    -fx-icon-color: white;
+
+}
+
+
+.side .selected {
+    -fx-background-color: white;
+    -fx-text-fill: #464646;
+}
+
+.selected .ikonli-font-icon {
+     -fx-icon-color: #464646;
+}
+
+.side .unselected:hover {
+    -fx-background-color: #c24a36;
+
+}
