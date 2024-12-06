@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardController">
    <children>
-      <Button fx:id="addRestBtn" layoutX="60.0" layoutY="26.0" mnemonicParsing="false" onAction="#addRestaurant" prefHeight="44.0" prefWidth="190.0" text="Add New" />
+      <Button fx:id="addRestBtn" layoutX="60.0" layoutY="26.0" mnemonicParsing="false" onAction="#showAddResDialog" prefHeight="44.0" prefWidth="190.0" text="Add New" />
       <VBox fx:id="restaurantList" layoutX="60.0" layoutY="94.0" prefHeight="758.0" prefWidth="1000.0" />
    </children>
 </AnchorPane>

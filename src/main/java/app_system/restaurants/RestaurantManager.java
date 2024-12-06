@@ -3,17 +3,9 @@ package app_system.restaurants;
 import java.util.ArrayList;
 
 public class RestaurantManager {
-    private ArrayList<Restaurant> restaurants;
+    private static ArrayList<Restaurant> restaurants = new ArrayList<Restaurant>();
 
-    public RestaurantManager(ArrayList<Restaurant> restaurants) {
-        this.restaurants = restaurants;
-    }
-
-    public ArrayList<Restaurant> getRestaurants() {
+    public static ArrayList<Restaurant> getRestaurants() {
         return restaurants;
-    }
-
-    public void setRestaurants(ArrayList<Restaurant> restaurants) {
-        this.restaurants = restaurants;
     }
 }

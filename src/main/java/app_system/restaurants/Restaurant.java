@@ -1,10 +1,13 @@
 package app_system.restaurants;
 
+import java.io.File;
+
 public class Restaurant {
     private String nameRes;
     private String addressRes;
     private String contactInfo;
     private Menu menu;
+    private File imgFile;
     private float rating;
     public  int[] rest_reviews;
 
@@ -13,6 +16,14 @@ public class Restaurant {
         this.nameRes = name_res;
         this.addressRes = addressRes;
         this.contactInfo = contactInfo;
+    }
+
+    public Restaurant(String nameRes, String addressRes, String contactInfo, File imgFile) {
+        this.nameRes = nameRes;
+        this.addressRes = addressRes;
+        this.contactInfo = contactInfo;
+        this.menu = menu;
+        this.imgFile = imgFile;
     }
 
     public String getNameRes() {
@@ -25,6 +36,14 @@ public class Restaurant {
 
     public String getAddressRes() {
         return addressRes;
+    }
+
+    public File getImgFile() {
+        return imgFile;
+    }
+
+    public void setImgFile(File imgFile) {
+        this.imgFile = imgFile;
     }
 
     public void setAddressRes(String addressRes) {

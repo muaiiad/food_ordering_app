@@ -3,6 +3,7 @@ package app_interface;
 import app_system.restaurants.Restaurant;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
@@ -31,6 +32,7 @@ public class RestaurantDashboardItemController {
         restContact.setText(restaurant.getContactInfo());
         restAddress.setText(restaurant.getAddressRes());
         ratingText.setText(String.format("%.1f", restaurant.getRating()));
+        restImage.setImage(new Image(restaurant.getImgFile().toURI().toString()));
     }
 
 }
