@@ -1,6 +1,9 @@
 package app_system.restaurants;
 
+import app_system.orders.Review;
+
 import java.io.File;
+import java.util.ArrayList;
 
 public class Restaurant {
     private String nameRes;
@@ -9,8 +12,18 @@ public class Restaurant {
     private Menu menu;
     private File imgFile;
     private float rating;
-    public  int[] rest_reviews;
+    private ArrayList<Review> reviews;
 
+    public Restaurant() {
+    }
+
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
 
     public Restaurant(String name_res, String addressRes, String contactInfo) {
         this.nameRes = name_res;
@@ -73,4 +86,6 @@ public class Restaurant {
     public void setRating(float rating) {
         this.rating = rating;
     }
+
+
 }

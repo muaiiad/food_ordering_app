@@ -14,8 +14,8 @@
       <HBox prefHeight="64.0" prefWidth="600.0" styleClass="header-container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <VBox layoutX="150.0" layoutY="132.0" prefHeight="204.0" prefWidth="300.0" styleClass="login-container" AnchorPane.bottomAnchor="64.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="132.0">
          <children>
-            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" styleClass="input-field" />
-            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" styleClass="input-field" />
+            <TextField fx:id="emailField" maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" styleClass="input-field" />
+            <TextField fx:id="passwordField" maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" styleClass="input-field" />
             <Button fx:id="loginButton" minWidth="150.0" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="300.0" text="Login" />
             <HBox alignment="CENTER" minWidth="150.0" prefHeight="22.0" prefWidth="300.0">
                <children>

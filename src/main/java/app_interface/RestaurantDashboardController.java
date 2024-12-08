@@ -21,6 +21,20 @@ public class RestaurantDashboardController {
     @FXML
     private VBox restaurantList;
 
+    @FXML
+    public void initialize() throws IOException {
+
+
+        for (Restaurant res: RestaurantManager.getRestaurants()) {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(getClass().getResource("restaurant_dashboard_item.fxml"));
+            AnchorPane item = loader.load();
+            RestaurantDashboardItemController itemController = loader.getController();
+            itemController.setData(res);
+            restaurantList.getChildren().add(item);
+        }
+    }
+
 
     public void showAddResDialog() throws IOException {
 
@@ -31,9 +45,6 @@ public class RestaurantDashboardController {
         RestaurantDashboardFormController cont = new RestaurantDashboardFormController();
 
         cont = loader.getController();
-
-
-
 
 
         Stage stg = new Stage();

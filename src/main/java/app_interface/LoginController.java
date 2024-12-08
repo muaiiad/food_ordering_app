@@ -2,10 +2,13 @@ package app_interface;
 
 
 import app_system.accounts.AccountsManager;
+import app_system.accounts.Admin;
+import app_system.accounts.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -28,7 +31,32 @@ public class LoginController {
         stage.show();
     }
 
-    public void login() {
-        AccountsManager.getUsers();
+    public void login(ActionEvent event) throws IOException {
+        boolean authorized = false;
+        for (User usr: AccountsManager.getUsers() ) {
+            if (emailField.getText().equals(usr.getEmail()) && passwordField.getText().equals(usr.getPassword())) {
+                authorized = true;
+                //switch scene
+            }
+        }
+
+        for (Admin adm: AccountsManager.getAdmins() ) {
+            if (emailField.getText().equals(adm.getEmail()) && passwordField.getText().equals(adm.getPassword())) {
+                System.out.println(adm.getEmail());
+                System.out.println(emailField.getText());
+                authorized = true;
+                //switch scene
+                Parent pane = FXMLLoader.load(getClass().getResource("admin_dashboard.fxml"));
+                Scene scn = new Scene(pane);
+                Stage stg = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                stg.setScene(scn);
+                stg.show();
+                break;
+            }
+        }
+
+        if (!authorized) {
+            System.out.println("FAILED!!!");
+        }
     }
 }

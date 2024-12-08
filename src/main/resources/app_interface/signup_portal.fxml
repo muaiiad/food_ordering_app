@@ -14,10 +14,10 @@
       <HBox prefHeight="64.0" prefWidth="600.0" styleClass="header-container" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <VBox layoutX="150.0" layoutY="132.0" prefHeight="257.0" prefWidth="300.0" styleClass="login-container" stylesheets="@login.css" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="132.0">
          <children>
-            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" styleClass="input-field" />
-            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Username" styleClass="input-field" />
-            <TextField maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" styleClass="input-field" />
-            <Button minWidth="150.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="300.0" text="Register" />
+            <TextField fx:id="emailField" maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Email" styleClass="input-field" />
+            <TextField fx:id="usernameField" maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Username" styleClass="input-field" />
+            <TextField fx:id="passwordField" maxWidth="300.0" minWidth="150.0" prefHeight="35.0" prefWidth="300.0" promptText="Password" styleClass="input-field" />
+            <Button minWidth="150.0" mnemonicParsing="false" onAction="#registerNewUser" prefHeight="35.0" prefWidth="300.0" text="Register" />
             <HBox alignment="CENTER" minWidth="150.0" prefHeight="22.0" prefWidth="300.0">
                <children>
                   <Label alignment="CENTER" prefHeight="23.0" prefWidth="138.0" text="Already have an account?" />

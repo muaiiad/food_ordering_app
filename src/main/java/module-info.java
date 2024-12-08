@@ -12,3 +12,4 @@ module com.team.food_ordering_app {
     exports app_system.orders;
     exports app_system.restaurants;
 }
+

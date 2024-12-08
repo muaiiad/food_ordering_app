@@ -1,0 +1,86 @@
+[
+  {
+    "nameRes": "The Gourmet Kitchen",
+    "addressRes": "123 Flavor Street, Food City",
+    "contactInfo": "555-1234",
+    "menu": {
+      "items": [
+        {
+          "name": "Cheeseburger",
+          "description": "A juicy beef patty with melted cheese",
+          "price": 5.99,
+          "options": "Lettuce, Tomato, Pickles, Bacon"
+        },
+        {
+          "name": "Veggie Burger",
+          "description": "A delicious patty made from fresh vegetables",
+          "price": 4.49,
+          "options": "Lettuce, Tomato, Avocado"
+        },
+        {
+          "name": "Chocolate Cake",
+          "description": "Rich chocolate cake with frosting",
+          "price": 3.99,
+          "options": "Vanilla Ice Cream, Whipped Cream"
+        }
+      ]
+    },
+    "rating": 4.5
+  },
+  {
+    "nameRes": "Ocean Breeze Seafood",
+    "addressRes": "456 Seaside Ave, Beach Town",
+    "contactInfo": "555-6789",
+    "menu": {
+      "items": [
+        {
+          "name": "Grilled Salmon",
+          "description": "Fresh salmon grilled to perfection",
+          "price": 12.99,
+          "options": "Lemon, Garlic Butter, Veggies"
+        },
+        {
+          "name": "Shrimp Cocktail",
+          "description": "Chilled shrimp served with cocktail sauce",
+          "price": 8.99,
+          "options": "Lemon Wedges, Cocktail Sauce"
+        },
+        {
+          "name": "Lobster Roll",
+          "description": "Sweet lobster meat in a buttery roll",
+          "price": 14.99,
+          "options": "Lettuce, Lemon"
+        }
+      ]
+    },
+    "rating": 4.8
+  },
+  {
+    "nameRes": "Vegan Delight",
+    "addressRes": "789 Green Way, Healthyville",
+    "contactInfo": "555-4321",
+    "menu": {
+      "items": [
+        {
+          "name": "Quinoa Salad",
+          "description": "Fresh quinoa with mixed greens and dressing",
+          "price": 7.99,
+          "options": "Olives, Feta Cheese, Avocado"
+        },
+        {
+          "name": "Tofu Stir Fry",
+          "description": "Stir-fried tofu with vegetables and soy sauce",
+          "price": 9.49,
+          "options": "Rice, Noodles, Peanut Sauce"
+        },
+        {
+          "name": "Chia Pudding",
+          "description": "Creamy chia pudding topped with fresh berries",
+          "price": 4.49,
+          "options": "Honey, Almonds"
+        }
+      ]
+    },
+    "rating": 4.2
+  }
+]

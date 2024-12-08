@@ -4,10 +4,11 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="150.0" prefWidth="415.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardItemController">
+<AnchorPane prefHeight="150.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardItemController">
    <children>
       <ImageView fx:id="restImage" fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -19,16 +20,20 @@
             <Font name="IBM Plex Sans SemiBold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="restAddress" alignment="TOP_CENTER" graphicTextGap="0.0" layoutX="150.0" layoutY="55.0" text="Restaurant_Address" textFill="#7c7c7c">
-         <font>
-            <Font name="IBM Plex Sans Medium" size="14.0" />
-         </font>
-      </Label>
-      <Label fx:id="restContact" alignment="TOP_CENTER" graphicTextGap="0.0" layoutX="290.0" layoutY="55.0" text="Contact_Info" textFill="#7c7c7c">
-         <font>
-            <Font name="IBM Plex Sans Medium" size="14.0" />
-         </font>
-      </Label>
+      <HBox layoutX="150.0" layoutY="58.0" prefHeight="20.0" prefWidth="312.0" spacing="15.0">
+         <children>
+            <Label fx:id="restAddress" alignment="TOP_CENTER" graphicTextGap="0.0" text="Restaurant_Address" textFill="#7c7c7c">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="restContact" alignment="TOP_CENTER" graphicTextGap="0.0" text="Contact_Info" textFill="#7c7c7c">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
       <Label fx:id="ratingText" layoutX="150.0" layoutY="83.0" prefHeight="31.0" prefWidth="40.0" text="4.7">
          <font>
             <Font name="Noto Sans Medium" size="21.0" />
