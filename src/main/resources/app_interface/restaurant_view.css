@@ -1,0 +1,41 @@
+.fillter-container{
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 6px;
+
+}
+.fillter-container Button {
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: "Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 6px;
+}
+.fillter-container ComboBox {
+    -fx-background-color: #D3D3D3;
+    -fx-text-fill: "Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+.image{
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+.itemlabel{
+-fx-background_color:"white";
+    -fx-text-fill: "Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+}
+.iteminfo{
+-fx-background_color:"white";
+    -fx-text-fill: A9A9A9;
+    -fx-font-weight: bold;
+    -fx-font-size: 0.8em;
+
+}
+
+
