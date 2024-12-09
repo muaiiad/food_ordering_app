@@ -9,15 +9,17 @@ public class Menu {
     }
 
     public ArrayList<Menu_Item> getItems() {
-        return items;
+        return items; //
     }
 
     public void setItems(ArrayList<Menu_Item> items) {
-        this.items = items;
+        this.items = items; //
     }
 
     public Menu(ArrayList<Menu_Item> items) {
-        this.items = items;
+        this.items = items; //
     }
+
+
 
 }

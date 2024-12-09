@@ -25,7 +25,7 @@ public class restaurant_viewController {
     @FXML
     Label numOfResult;
     @FXML
-    GridPane gridres;
+    GridPane grid;
     @FXML
     public void initialize() throws IOException {
 
@@ -40,8 +40,8 @@ public class restaurant_viewController {
         loader.setLocation(getClass().getResource("restaurant_view.fxml"));
         Parent root = loader.load();
     }
-    private int counterx;
-    private int countery;
+    private int counterx=0;
+    private int countery=0;
 
     public void additem(Restaurant res)throws IOException {
             FXMLLoader loader = new FXMLLoader();
@@ -49,11 +49,11 @@ public class restaurant_viewController {
             AnchorPane item = loader.load();
             item_viewCotroller controller = loader.getController();
             controller.setdata(res);
-            if (counterx<2) {
+            if (counterx>2) {
                 counterx = 0;
                 countery++;
             }
-            gridres.add(item,counterx,countery);
+            grid.add(item,counterx++,countery);
 
     }
 

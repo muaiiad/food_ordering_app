@@ -19,14 +19,14 @@ public class Restaurant {
 
     public ArrayList<Review> getReviews() {
         return reviews;
-    }
+    }//
 
     public void setReviews(ArrayList<Review> reviews) {
-        this.reviews = reviews;
+        this.reviews = reviews;//
     }
 
     public Restaurant(String name_res, String addressRes, String contactInfo) {
-        this.nameRes = name_res;
+        this.nameRes = name_res;//
         this.addressRes = addressRes;
         this.contactInfo = contactInfo;
     }

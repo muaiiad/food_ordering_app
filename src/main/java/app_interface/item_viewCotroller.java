@@ -10,13 +10,13 @@ public class item_viewCotroller {
     @FXML
     ImageView photores;
     @FXML
-    Label nameres;
+    Label restaurant_name;
     @FXML
-    Label infores;
+    Label restaurant_info;
 
   public void setdata(Restaurant res){
-      nameres.setText(res.getNameRes());
-      infores.setText(res.getContactInfo());
+      restaurant_name.setText(res.getNameRes());
+      restaurant_info.setText(res.getContactInfo());
       //photores.setImage(res.getImgFile());
 }
 }

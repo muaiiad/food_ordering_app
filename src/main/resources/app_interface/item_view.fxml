@@ -8,12 +8,12 @@
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
 
-<AnchorPane prefHeight="185.0" prefWidth="290.0" stylesheets="@restaurant_view.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.ItemView">
+<AnchorPane prefHeight="185.0" prefWidth="290.0" style="-fx-background-color: lightgray;" stylesheets="@restaurant_view.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.item_viewCotroller">
    <children>
       <VBox layoutX="3.0" layoutY="4.0" prefHeight="170.0" prefWidth="280.0" spacing="10.0">
          <children>
             <ImageView fitHeight="111.0" fitWidth="280.0" pickOnBounds="true" preserveRatio="true" styleClass="image" />
-            <Label fx:id="restaurant_name" prefHeight="27.0" prefWidth="63.0" styleClass="itemlabel" text="Label" translateX="20.0" />
+            <Label fx:id="restaurant_name" prefHeight="24.0" prefWidth="238.0" styleClass="itemlabel" text="Label" translateX="20.0" />
             <Label fx:id="restaurant_info" blendMode="SRC_ATOP" prefHeight="15.0" prefWidth="166.0" styleClass="iteminfo" text="Mo'men" translateX="20.0">
                <textFill>
                   <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
