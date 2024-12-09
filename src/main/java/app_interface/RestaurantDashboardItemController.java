@@ -1,12 +1,14 @@
 package app_interface;
 
 import app_system.restaurants.Restaurant;
+import app_system.restaurants.RestaurantManager;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,11 +30,26 @@ public class RestaurantDashboardItemController{
     private Label restName;
 
     private int currentIndex;
-    private  Restaurant res;
+
+    private RestaurantDashboardController parentController;
+
+    public void setCurrentIndex(int currentIndex) {
+        this.currentIndex = currentIndex;
+    }
+
+    public void setParentController(RestaurantDashboardController parentController) {
+        this.parentController = parentController;
+    }
 
     @FXML
     private void initialize() {
-        System.out.println("TESTING!!!");
+
+    }
+
+
+    public void removeRestaurant() throws IOException {
+        RestaurantManager.getRestaurants().remove(currentIndex);
+        parentController.refreshResList();
     }
 
     public void setData(Restaurant restaurant) {

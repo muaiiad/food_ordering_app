@@ -38,23 +38,13 @@ public class RestaurantDashboardFormController {
     private TextField nameField;
 
     private File imageFile;
-
     public VBox resList;
     public Stage parentStage;
 
-    public void refreshResList() throws IOException {
-        resList.getChildren().clear();
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("restaurant_dashboard_item.fxml"));
+    private RestaurantDashboardController parentController;
 
-        AnchorPane item = loader.load();
-        RestaurantDashboardItemController itemController = loader.getController();
-
-
-        for (Restaurant res: RestaurantManager.getRestaurants()) {
-            itemController.setData(res);
-            resList.getChildren().add(item);
-        }
+    public void setParentController(RestaurantDashboardController parentController) {
+        this.parentController = parentController;
     }
 
     public void setImage() {
@@ -65,7 +55,7 @@ public class RestaurantDashboardFormController {
 
     public void addRestaurant() throws IOException {
         RestaurantManager.getRestaurants().add(new Restaurant(nameField.getText(), addressField.getText(), contactField.getText(), imageFile ));
-        refreshResList();
+        parentController.refreshResList();
         parentStage.close();
     }
 

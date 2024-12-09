@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<AnchorPane prefHeight="150.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardItemController">
+<AnchorPane prefHeight="150.0" prefWidth="548.0" style="-fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardItemController">
    <children>
       <ImageView fx:id="restImage" fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -40,5 +41,9 @@
          </font>
       </Label>
       <FontIcon iconColor="#ffd468" iconLiteral="fas-star" iconSize="16" layoutX="185.0" layoutY="105.0" text="" />
+      <FontIcon iconColor="#d34b4b" iconLiteral="fas-trash" iconSize="20" layoutX="507.0" layoutY="82.0" onMouseClicked="#removeRestaurant">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontIcon>
    </children>
 </AnchorPane>
