@@ -54,7 +54,7 @@ public class RestaurantDashboardFormController {
     }
 
     public void addRestaurant() throws IOException {
-        RestaurantManager.getRestaurants().add(new Restaurant(nameField.getText(), addressField.getText(), contactField.getText(), imageFile ));
+//        RestaurantManager.getRestaurants().add(new Restaurant(nameField.getText(), addressField.getText(), contactField.getText(), imageFile ));
         parentController.refreshResList();
         parentStage.close();
     }

@@ -11,7 +11,9 @@ public class Menu_Item {
 
     public  int[] reviews;
     public int counter_reviews=0;
-    public  int review_count = 0;
+    public  int review_index = 0;
+
+
     public Menu_Item(String name, String description, float price, String options) {
         this.name = name;
         this.description = description;
@@ -59,12 +61,12 @@ public class Menu_Item {
         this.counter_reviews = counter_reviews;
     }
 
-    public int getReview_count() {
-        return review_count;
+    public int getReview_index() {
+        return review_index;
     }
 
-    public void setReview_count(int review_count) {
-        this.review_count = review_count;
+    public void setReview_index(int review_count) {
+        this.review_index = review_count;
     }
 
     public float getPrice() {

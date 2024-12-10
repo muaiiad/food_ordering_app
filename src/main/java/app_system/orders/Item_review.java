@@ -4,13 +4,15 @@ import app_system.accounts.User;
 import app_system.restaurants.Menu_Item;
 
 public class Item_review extends Review{
+
+
 //     user will select the item they will rate it in main
     private Menu_Item reviewed_item;
 
-    public Item_review(User reviewer, int rate,Menu_Item reviewed_item) {
+    public Item_review(User reviewer, int rate) {
         super(reviewer, rate);
-        this.reviewed_item.reviews[reviewed_item.review_count]=rate;
-        this.reviewed_item.review_count++;
+        this.reviewed_item.reviews[reviewed_item.review_index]=rate;
+        this.reviewed_item.review_index++;
 
         if (rate>=4){
             this.reviewed_item.counter_reviews++;

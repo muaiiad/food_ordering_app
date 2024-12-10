@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.itemchoocecontroller">
+   <children>
+      <ListView id="mylist" fx:id="mylist" layoutX="136.0" layoutY="131.0" prefHeight="200.0" prefWidth="334.0" />
+      <Label alignment="CENTER" layoutX="-3.0" prefHeight="61.0" prefWidth="606.0" style="-fx-background-color: #eb5566;" text="choose the dish">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="mylable" alignment="CENTER" layoutX="-3.0" layoutY="83.0" prefHeight="17.0" prefWidth="600.0" text="the dish is:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn6" layoutX="500.0" layoutY="347.0" mnemonicParsing="false" onAction="#movetoscene5" prefHeight="39.0" prefWidth="95.0" style="-fx-background-color: #eb5566;" text="Next">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

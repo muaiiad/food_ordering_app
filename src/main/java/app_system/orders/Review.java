@@ -1,5 +1,7 @@
 package app_system.orders;
 import app_system.accounts.User;
+import app_system.restaurants.Restaurant;
+
 import java.util.Scanner;
 //abstract class
 public  abstract class Review {
@@ -10,6 +12,9 @@ public  abstract class Review {
         this.reviewer = reviewer;
         this.rate = rate;
     }
+
+
+//    public abstract void setrate( rests, int index, int item_rate);
 
     public User getReviewer() {
         return reviewer;

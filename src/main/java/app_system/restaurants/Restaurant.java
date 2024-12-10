@@ -12,6 +12,8 @@ public class Restaurant {
     private Menu menu;
     private File imgFile;
     private float rating;
+    public  int[] rest_reviews;
+    public  int review_index = 0;
     private ArrayList<Review> reviews;
 
     public Restaurant() {

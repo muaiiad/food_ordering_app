@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.reviewcontroller">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="127.0" style="-fx-background-color: orange;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="70.0" prefWidth="127.0" style="-fx-alignment: center;" text="R">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="70.0" prefWidth="129.0" style="-fx-alignment: center;" text="e">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="70.0" prefWidth="120.0" style="-fx-alignment: center;" text="v">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="70.0" prefWidth="120.0" style="-fx-alignment: center;" text="i">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="70.0" prefWidth="120.0" style="-fx-alignment: center;" text="e">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label prefHeight="70.0" prefWidth="120.0" style="-fx-alignment: center;" text="w">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="427.0" layoutY="10.0" prefHeight="92.0" prefWidth="165.0" AnchorPane.rightAnchor="7.666666666666657">
+         <children>
+            <Button id="btn_add" mnemonicParsing="false" onAction="#movetoscene2" prefHeight="43.0" prefWidth="166.0" style="-fx-background-color: orange;" text="+ Add  a Review">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
