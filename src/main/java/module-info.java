@@ -5,6 +5,7 @@ module com.team.food_ordering_app {
     requires org.kordamp.ikonli.core;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.ikonli.fontawesome5;
+    requires java.desktop;
 
     opens app_interface to javafx.fxml;
     exports app_interface;
