@@ -45,7 +45,11 @@ public class restaurant_viewController {
         for (Restaurant name : RestaurantManager.getRestaurants()) {
             additem(name);
         }
+
+
     }
+
+
 
 
     public void restaurant_view() throws IOException {

@@ -7,6 +7,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import org.kordamp.ikonli.javafx.FontIcon;
 
 import java.io.IOException;
 import java.net.URL;
@@ -14,6 +17,8 @@ import java.util.ResourceBundle;
 
 public class RestaurantDashboardItemController{
 
+    @FXML
+    private AnchorPane rootPane;
     @FXML
     private Label ratingText;
 
@@ -28,6 +33,9 @@ public class RestaurantDashboardItemController{
 
     @FXML
     private Label restName;
+
+    @FXML
+    private FontIcon star;
 
     private int currentIndex;
 
@@ -50,6 +58,14 @@ public class RestaurantDashboardItemController{
     public void removeRestaurant() throws IOException {
         RestaurantManager.getRestaurants().remove(currentIndex);
         parentController.refreshResList();
+    }
+
+    public void selectCurrent() throws IOException {
+        parentController.deselectAll();
+        rootPane.getStyleClass().add("selected-res");
+        parentController.setSelectedRestaurant(currentIndex);
+        parentController.refreshMenuList();
+        System.out.println(currentIndex);
     }
 
     public void setData(Restaurant restaurant) {
