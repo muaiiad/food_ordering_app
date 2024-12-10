@@ -5,6 +5,7 @@ public class Menu_Item {
     private String description;
     private float price;
     private String options;
+    private float rating;
 
     public Menu_Item() {
     }

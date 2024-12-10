@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="200.0" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.RestaurantDashboardFormController">
+<AnchorPane prefHeight="400.0" prefWidth="200.0" stylesheets="@admin.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.MenuDashboardFormController">
    <children>
       <VBox alignment="CENTER" prefHeight="493.0" prefWidth="410.0" spacing="50.0">
          <children>
@@ -25,8 +25,8 @@
             </VBox>
             <VBox prefHeight="27.0" prefWidth="300.0">
                <children>
-                  <Label styleClass="form-label" text="Address" />
-                  <TextField fx:id="addressField" styleClass="form-field">
+                  <Label styleClass="form-label" text="Description" />
+                  <TextField fx:id="descriptionField" styleClass="form-field">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -35,8 +35,8 @@
             </VBox>
             <VBox prefHeight="27.0" prefWidth="300.0">
                <children>
-                  <Label styleClass="form-label" text="ContactInfo" />
-                  <TextField fx:id="contactField" styleClass="form-field">
+                  <Label styleClass="form-label" text="Price" />
+                  <TextField fx:id="priceField" styleClass="form-field">
                      <padding>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                      </padding>
@@ -45,7 +45,7 @@
             </VBox>
             <VBox prefHeight="60.0" prefWidth="310.0">
                <children>
-                  <Label styleClass="form-label" text="Logo" />
+                  <Label styleClass="form-label" text="Image" />
                   <HBox prefHeight="42.0" prefWidth="310.0" spacing="10.0">
                      <children>
                         <TextField fx:id="imgField" editable="false" prefHeight="35.0" prefWidth="230.0" styleClass="form-field">
@@ -60,7 +60,7 @@
             </VBox>
             <VBox alignment="CENTER" prefHeight="106.0" prefWidth="410.0" spacing="10.0">
                <children>
-                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addRestaurant" prefHeight="35.0" prefWidth="334.0" styleClass="add-btn" text="Add">
+                  <Button fx:id="addBtn" mnemonicParsing="false" onAction="#addItem" prefHeight="35.0" prefWidth="334.0" styleClass="add-btn" text="Add">
                      <font>
                         <Font size="16.0" />
                      </font>

@@ -1,26 +1,21 @@
 package app_interface;
 
-import app_system.restaurants.Restaurant;
+import app_system.restaurants.Menu_Item;
 import app_system.restaurants.RestaurantManager;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
 
-public class RestaurantDashboardFormController {
+public class MenuDashboardFormController {
 
     @FXML
     private Button addBtn;
-
-    @FXML
-    private TextField addressField;
 
     @FXML
     private Button cancelBtn;
@@ -29,7 +24,7 @@ public class RestaurantDashboardFormController {
     private Button chooseBtn;
 
     @FXML
-    private TextField contactField;
+    private TextField descriptionField;
 
     @FXML
     private TextField imgField;
@@ -37,28 +32,34 @@ public class RestaurantDashboardFormController {
     @FXML
     private TextField nameField;
 
-    private File imageFile;
-    private Stage parentStage;
+    @FXML
+    private TextField priceField;
 
-    public void setParentStage(Stage parentStage) {
-        this.parentStage = parentStage;
-    }
 
     private RestaurantDashboardController parentController;
+    private Stage parentStage;
 
     public void setParentController(RestaurantDashboardController parentController) {
         this.parentController = parentController;
     }
 
+    public void setParentStage(Stage parentStage) {
+        this.parentStage = parentStage;
+    }
+
+    @FXML
     public void setImage() {
         FileChooser fc = new FileChooser();
-        imageFile = fc.showOpenDialog(parentStage);
+        File imageFile = fc.showOpenDialog(parentStage);
         imgField.setText(imageFile.getAbsolutePath());
     }
 
-    public void addRestaurant() throws IOException {
-//        RestaurantManager.getRestaurants().add(new Restaurant(nameField.getText(), addressField.getText(), contactField.getText(), imageFile ));
-        parentController.refreshResList();
+
+    @FXML
+    void addItem(ActionEvent event) throws IOException {
+        RestaurantManager.getRestaurants().get(parentController.getSelectedRestaurantIndex()).getMenu().getItems().add(
+                new Menu_Item(nameField.getText(),descriptionField.getText(),Float.valueOf(priceField.getText()),""));
+        parentController.refreshMenuList();
         parentStage.close();
     }
 
@@ -66,6 +67,7 @@ public class RestaurantDashboardFormController {
     void cancel() {
         parentStage.close();
     }
+
 
 
 }

@@ -19,9 +19,9 @@
          <children>
             <HBox alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="1000.0" spacing="10.0" styleClass="fillter-container">
                <children>
-                  <TextField prefHeight="32.0" prefWidth="345.0" />
+                  <TextField fx:id="search" alignment="CENTER" onAction="#search" onInputMethodTextChanged="#search" prefHeight="32.0" prefWidth="345.0" promptText="Search" style="-fx-background-radius: 20; -fx-background-color: D3D3D3; -fx-border-color: Black; -fx-border-radius: 20;" />
                   <ComboBox prefHeight="32.0" prefWidth="142.0" promptText="Address" />
-                  <Button mnemonicParsing="false" text="🛒" textAlignment="CENTER">
+                  <Button mnemonicParsing="false" text="🛒" textAlignment="CENTER" textFill="#0b0a0a">
                      <font>
                         <Font size="6.0" />
                      </font>

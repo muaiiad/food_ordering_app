@@ -1,0 +1,22 @@
+.addBtn {
+    -fx-background-radius: 5px;
+    -fx-text-fill: white;
+    -fx-background-color: #48BF1F;
+}
+
+.addBtn:hover {
+    -fx-background-color: #42AD1C;
+}
+
+.addBtn:pressed {
+    -fx-background-color: #71d437;
+}
+.selected-res {
+    -fx-background-color: #c4c4c4;
+}
+.rest-item:hover ~ .rest-item{
+
+    -fx-background-color: blue;
+
+
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<AnchorPane fx:id="rootPane" onMouseClicked="#selectCurrent" prefHeight="150.0" prefWidth="550.0" styleClass="rest-item" stylesheets="@restaurant-dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.DashboardItemController">
+   <children>
+      <ImageView fx:id="itemImage" fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../OneDrive/Pictures/New%20folder/in%20my%20head.png" />
+         </image>
+      </ImageView>
+      <HBox layoutX="150.0" layoutY="25.0" prefHeight="33.0" prefWidth="332.0" spacing="10.0">
+         <children>
+            <Label fx:id="itemName" alignment="TOP_CENTER" graphicTextGap="0.0" text="Item_Name">
+               <font>
+                  <Font name="IBM Plex Sans SemiBold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="priceText" alignment="TOP_CENTER" graphicTextGap="0.0" text="\$Price">
+               <font>
+                  <Font name="IBM Plex Sans SemiBold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutX="150.0" layoutY="58.0" prefHeight="55.0" prefWidth="312.0" spacing="15.0">
+         <children>
+            <Label fx:id="itemDescription" alignment="TOP_CENTER" graphicTextGap="0.0" text="Item_Description" textFill="#7c7c7c">
+               <font>
+                  <Font name="IBM Plex Sans Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label fx:id="ratingText" layoutX="150.0" layoutY="110.0" prefHeight="31.0" prefWidth="40.0" text="4.7">
+         <font>
+            <Font name="Noto Sans Medium" size="21.0" />
+         </font>
+      </Label>
+      <FontIcon iconColor="#d34b4b" iconLiteral="fas-trash" iconSize="20" layoutX="507.0" layoutY="82.0" onMouseClicked="#removeItem">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontIcon>
+      <FontIcon iconColor="#ffb133" iconLiteral="fas-star" iconSize="18" layoutX="184.0" layoutY="132.0" text="">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </FontIcon>
+   </children>
+</AnchorPane>

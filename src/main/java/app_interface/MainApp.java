@@ -17,7 +17,6 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("restaurant_view.fxml"));
-        root = FXMLLoader.load(getClass().getResource("reviews.fxml"));
         Scene scene = new Scene(root);
         String css = getClass().getResource("login.css").toExternalForm();
         scene.getStylesheets().add(css);
