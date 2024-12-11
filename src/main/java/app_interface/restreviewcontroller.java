@@ -57,7 +57,7 @@ public class restreviewcontroller {
 
 
     public void movetoscene3(ActionEvent e) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("rest-rate.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("review/rest-rate.fxml"));
         stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
         Scene scene=new Scene(root);
         stage.setScene(scene);

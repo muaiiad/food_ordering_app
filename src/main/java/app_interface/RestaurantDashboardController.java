@@ -44,7 +44,7 @@ public class RestaurantDashboardController {
         restaurantList.getChildren().clear();
         int idx = 0;
         for (Restaurant res: RestaurantManager.getRestaurants()) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("restaurant_dashboard_item.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("adm/restaurant_dashboard_item.fxml"));
             AnchorPane item = loader.load();
             RestaurantDashboardItemController itemController = loader.getController();
             itemController.setCurrentIndex(idx++);
@@ -59,7 +59,7 @@ public class RestaurantDashboardController {
         menuList.getChildren().clear();
         int idx = 0;
         for (Menu_Item item: RestaurantManager.getRestaurants().get(selectedRestaurantIndex).getMenu().getItems()) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_dashboard_item.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("adm/menu_dashboard_item.fxml"));
             AnchorPane listElement = loader.load();
             DashboardItemController controller = loader.getController();
             controller.setParentController(this);
@@ -83,7 +83,7 @@ public class RestaurantDashboardController {
 
     public void showAddResDialog() throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("restaurant_dashboard_form.fxml"));
+        loader.setLocation(getClass().getResource("adm/restaurant_dashboard_form.fxml"));
         Parent root = loader.load();
 
         RestaurantDashboardFormController cont = loader.getController();
@@ -98,7 +98,7 @@ public class RestaurantDashboardController {
     }
 
     public void showAddMenuDialog() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_dashboard_form.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("adm/menu_dashboard_form.fxml"));
         Parent root = loader.load();
 
         MenuDashboardFormController cont = loader.getController();

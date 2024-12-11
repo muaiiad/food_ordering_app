@@ -46,7 +46,7 @@ String[]food={"item1","item2","item3","item4","item5","item6","item7","item8","i
     }
 
     public void movetoscene5(ActionEvent e) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("item_rate.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("review/item_rate.fxml"));
         stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
         Scene scene=new Scene(root);
         stage.setScene(scene);

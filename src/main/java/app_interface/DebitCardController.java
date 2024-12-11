@@ -56,7 +56,7 @@ public class DebitCardController {
 
     @FXML
     private void handleBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("payment/Payment.fxml"));
         Stage stage = (Stage) cardNumber.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

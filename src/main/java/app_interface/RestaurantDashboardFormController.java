@@ -65,6 +65,7 @@ public class RestaurantDashboardFormController {
     @FXML
     void cancel() {
         parentStage.close();
+        RestaurantManager.getRestaurants().get(0).getMenu().getItems();
     }
 
 

@@ -24,13 +24,13 @@ public class PaymentController {
 
         switch (selectedPayment.toLowerCase()) {
             case "credit card":
-                fxmlFile = "/app_interface/CreditCardPayment.fxml";
+                fxmlFile = "/app_interface/payment/CreditCardPayment.fxml";
                 break;
             case "debit card":
-                fxmlFile = "/app_interface/DebitCardPayment.fxml";
+                fxmlFile = "/app_interface/payment/DebitCardPayment.fxml";
                 break;
             case "digital wallet":
-                fxmlFile = "/app_interface/DigitalWalletPayment.fxml";
+                fxmlFile = "/app_interface/payment/DigitalWalletPayment.fxml";
                 break;
             default:
                 System.out.println("No payment method selected.");

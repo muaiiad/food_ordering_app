@@ -25,14 +25,14 @@ public class reviewcontroller {
     public FontIcon icon1,icon2,icon3,icon4,icon5;
 
     public void movetoscene2(ActionEvent e) throws IOException {
-            Parent root= FXMLLoader.load(getClass().getResource("restreview.fxml"));
+            Parent root= FXMLLoader.load(getClass().getResource("review/restreview.fxml"));
             stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
             Scene scene=new Scene(root);
             stage.setScene(scene);
              stage.show();
         }
     public void movetoscene4(ActionEvent e) throws IOException {
-        Parent root= FXMLLoader.load(getClass().getResource("item_selection.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("review/item_selection.fxml"));
         stage=(Stage) ((Node)e.getSource()).getScene().getWindow();
         Scene scene=new Scene(root);
         stage.setScene(scene);

@@ -46,7 +46,7 @@ public class AdminDashboardController {
         deselectAll();
         restaurantsBtn.getStyleClass().removeIf(style -> style.equals("unselected"));
         restaurantsBtn.getStyleClass().add("selected");
-        dashPane.getChildren().add(FXMLLoader.load(getClass().getResource("restaurant_dashboard.fxml")));
+        dashPane.getChildren().add(FXMLLoader.load(getClass().getResource("adm/restaurant_dashboard.fxml")));
     }
     public void selectMenus(ActionEvent e) {
         deselectAll();
