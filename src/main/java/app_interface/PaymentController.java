@@ -15,9 +15,8 @@ import java.io.IOException;
 public class PaymentController {
 
     @FXML
-    private ToggleGroup paymentMethod;  // للتأكد من أن هناك اختيارات بين طرق الدفع
+    private ToggleGroup paymentMethod;
 
-    // التنقل إلى الواجهة المناسبة
     @FXML
     public void handleNextButton(ActionEvent event) throws IOException {
         String selectedPayment = ((RadioButton) paymentMethod.getSelectedToggle()).getText();
@@ -25,27 +24,26 @@ public class PaymentController {
 
         switch (selectedPayment.toLowerCase()) {
             case "credit card":
-                fxmlFile = "/app_interface/CreditCardPayment.fxml";  // استخدم المسار الكامل
+                fxmlFile = "/app_interface/CreditCardPayment.fxml";
                 break;
             case "debit card":
-                fxmlFile = "/app_interface/DebitCardPayment.fxml";  // استخدم المسار الكامل
+                fxmlFile = "/app_interface/DebitCardPayment.fxml";
                 break;
             case "digital wallet":
-                fxmlFile = "/app_interface/DigitalWalletPayment.fxml";  // استخدم المسار الكامل
+                fxmlFile = "/app_interface/DigitalWalletPayment.fxml";
                 break;
             default:
                 System.out.println("No payment method selected.");
                 return;
         }
 
-        // تحميل الـ FXML الجديد
         try {
             Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();
         } catch (IOException e) {
-            e.printStackTrace();  // طباعة الاستثناء لمساعدتك في تحديد المشكلة
+            e.printStackTrace();
         }
     }
 }

@@ -21,7 +21,7 @@ public class PaymentProcessor {
 
         public void generateTransactionID() {
             Random random = new Random();
-            transactionID = 100000 + random.nextInt(900000); // قيمة من 100000 إلى 999999
+            transactionID = 100000 + random.nextInt(900000);
         }
 
         public double getAmount() {

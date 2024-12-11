@@ -23,21 +23,18 @@ public class DigitalWalletController {
     @FXML
     private TextField walletProviderField;
 
-    // الخاصية الخاصة بقيمة المبلغ
-    private double amount = 100.0;  // يمكنك ضبطه بناءً على المنتج المحدد
+    private double amount = 100.0;
 
     @FXML
     private void handleConfirm(ActionEvent event) {
         String walletID = walletIDField.getText().trim();
         String walletProvider = walletProviderField.getText().trim();
 
-        // التحقق من أن الحقول ليست فارغة
         if (walletID.isEmpty() || walletProvider.isEmpty()) {
             showAlert("Error", "Please fill in all fields.", Alert.AlertType.ERROR);
             return;
         }
 
-        // إنشاء رقم معاملة عشوائي
         int transactionID = new Random().nextInt(100000);
 
         // إنشاء كائن الدفع
@@ -49,7 +46,6 @@ public class DigitalWalletController {
                 walletID
         );
 
-        // معالجة الدفع والتحقق من النتيجة
         boolean success = payment.processPayment();
 
         if (success) {
@@ -60,7 +56,6 @@ public class DigitalWalletController {
         }
     }
 
-    // دالة لإظهار تنبيه
     private void showAlert(String title, String message, Alert.AlertType type) {
         Alert alert = new Alert(type);
         alert.setTitle(title);
@@ -72,7 +67,6 @@ public class DigitalWalletController {
     @FXML
     private Button backButton;
 
-    // دالة الرجوع إلى الصفحة السابقة
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
