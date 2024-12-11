@@ -16,7 +16,7 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("restaurant_view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("admin_dashboard.fxml"));
         Scene scene = new Scene(root);
         String css = getClass().getResource("login.css").toExternalForm();
         scene.getStylesheets().add(css);
@@ -24,17 +24,12 @@ public class MainApp extends Application {
         //123
         stage.setTitle("Food Ordering App");
         stage.setScene(scene);
-        stage.setX(0);
-        stage.setY(0);
         stage.show();
-
-
-
     }
 
     public static void main(String[] args) {
-        FileManager.readFiles();
         launch(args);
+//        FileManager.readIntoAdmins();
 //
 //        for (Admin adm: AccountsManager.getAdmins()) {
 //            System.out.println(adm.getEmail());

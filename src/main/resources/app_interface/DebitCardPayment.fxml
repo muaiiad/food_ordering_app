@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="app_system.controller.DebitCardController" spacing="20" alignment="CENTER" padding="20">
+    <TextField fx:id="cardNumber" promptText="Card Number" />
+    <TextField fx:id="cardHolder" promptText="Card Holder Name" />
+    <TextField fx:id="expiryDate" promptText="Expiry Date (MM/YY)" />
+    <PasswordField fx:id="cvv" promptText="CVV" />
+
+    <Button text="Complete Payment" onAction="#handleCompletePayment"/>
+</VBox>

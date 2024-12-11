@@ -1,14 +1,27 @@
 package app_system.orders;
 
-public class Payment {
-    private String paymentMethod;
-    private int transactionID;
-    private String  paymentStatus;
+public abstract class Payment {
 
-    public Payment(String paymentMethod,int transactionID,String  paymentStatus){
+    private double amount;
+    private String paymentMethod;
+    private String paymentStatus;
+    private int transactionID;
+
+    public Payment(double amount, String paymentMethod , int transactionID) {
+        this.amount = amount;
         this.paymentMethod = paymentMethod;
+        this.paymentStatus = "Pending";
         this.transactionID = transactionID;
-        this.paymentStatus = paymentStatus;
+    }
+
+    public abstract boolean processPayment();
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public String getPaymentMethod() {
@@ -19,14 +32,6 @@ public class Payment {
         this.paymentMethod = paymentMethod;
     }
 
-    public int getTransactionID() {
-        return transactionID;
-    }
-
-    public void setTransactionID(int transactionID) {
-        this.transactionID = transactionID;
-    }
-
     public String getPaymentStatus() {
         return paymentStatus;
     }
@@ -35,23 +40,12 @@ public class Payment {
         this.paymentStatus = paymentStatus;
     }
 
-    public void paymentProcessing(String method, int transactionId){
-        if (method == null || method.isEmpty() || transactionId <= 0) {
-            System.out.println("Invalid payment method or transaction ID.");
-            this.paymentStatus = "Failed";
-        }
-        this.paymentMethod = method;
-        this.transactionID = transactionId;
-        this.paymentStatus = "Pending";
-
-        System.out.println("Processing payment via " + paymentMethod);
+    public int getTransactionID() {
+        return transactionID;
     }
 
-    public void displayPaymentDetails() {
-        System.out.println("Payment Details:");
-        System.out.println("*****************");
-        System.out.println("     Method: " + paymentMethod);
-        System.out.println("     Transaction ID: " + transactionID);
-        System.out.println("     Status: " + paymentStatus);
+    public void setTransactionID(int transactionID) {
+        this.transactionID = transactionID;
     }
 }
+
