@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="337.0" style="-fx-background-radius: 15; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.DishSelectionController">
+   <children>
+      <Label layoutX="100.0" layoutY="200.0" prefHeight="55.0" prefWidth="210.0" text="Label">
+         <VBox.margin>
+            <Insets left="10.0" top="30.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_LEFT" prefHeight="73.0" prefWidth="390.0" text="Label&#10;label&#10;label&#10;label&#10;&#10;" textFill="#595656de">
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" top="10.0" />
+         </VBox.margin>
+      </Label>
+      <ImageView fitHeight="182.0" fitWidth="295.0" pickOnBounds="true" preserveRatio="true">
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+         <image>
+            <Image url="@../../../../../../OneDrive/Desktop/classic-french-seafood-dishes-hero-img.png" />
+         </image></ImageView>
+      <Label prefHeight="18.0" prefWidth="175.0" text="Label">
+         <VBox.margin>
+            <Insets left="10.0" top="30.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label prefHeight="18.0" prefWidth="94.0" text="Label">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <VBox prefHeight="150.0" prefWidth="100.0">
+         <children>
+            <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="129.0" text="RadioButton">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="sauceSelection" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="141.0" text="RadioButton" toggleGroup="$sauceSelection">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton layoutX="10.0" layoutY="45.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="143.0" text="RadioButton" toggleGroup="$sauceSelection">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+            <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="141.0" text="RadioButton" toggleGroup="$sauceSelection">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </RadioButton>
+         </children>
+         <VBox.margin>
+            <Insets left="10.0" />
+         </VBox.margin>
+      </VBox>
+      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="330.0" style="-fx-border-radius: 900; -fx-background-color: #E65A43; -fx-background-radius: 50;" text="Make 1 required selection -$price" textFill="#f7f2f2">
+         <VBox.margin>
+            <Insets left="5.0" />
+         </VBox.margin>
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>
