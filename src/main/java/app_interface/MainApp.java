@@ -16,10 +16,10 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("menu_view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login_portal.fxml"));
         Scene scene = new Scene(root);
-      //  String css = getClass().getResource("login.css").toExternalForm();
-      //  scene.getStylesheets().add(css);
+        String css = getClass().getResource("login.css").toExternalForm();
+        scene.getStylesheets().add(css);
         //hello
         //123
         stage.setTitle("Food Ordering App");
