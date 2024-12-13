@@ -43,17 +43,22 @@ public class RestaurantDashboardController {
     public void refreshResList() throws IOException {
         restaurantList.getChildren().clear();
         int idx = 0;
-        for (Restaurant res: RestaurantManager.getRestaurants()) {
+        for (Restaurant res: RestaurantManager.getRestaurants().stream().filter(str -> str.getNameRes().contains("Hello") ).toList()  ) {
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("adm/restaurant_dashboard_item.fxml"));
             AnchorPane item = loader.load();
             RestaurantDashboardItemController itemController = loader.getController();
+
             itemController.setCurrentIndex(idx++);
             itemController.setData(res);
             itemController.setParentController(this);
+
             restaurantList.getChildren().add(item);
             restaurantList.getChildren().add(new Separator());
+
         }
     }
+
 
     public void refreshMenuList() throws IOException {
         menuList.getChildren().clear();

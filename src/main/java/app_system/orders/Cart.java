@@ -1,11 +1,11 @@
-package orders;
+package app_system.orders;
 
 import java.util.*;
-import app_system.restaurants.Menu_Item;
+
 //-------CART CLASS-------//
 public class Cart {
     private ArrayList<Cart_Item> items;
-     private Date createdDate;
+    private Date createdDate;
     private float totalPrice=0;
 
     public ArrayList<Cart_Item> getItems() {
@@ -43,17 +43,17 @@ public class Cart {
     {
         for(Cart_Item itr : this.items)
       {
-         totalPrice += itr.menu_item.getPrice();
+         totalPrice += itr.getMenu_item().getPrice();
        }
         return totalPrice;
     }
-   private void  Add_item( Cart_Item cart_item )
+    public void  Add_item( Cart_Item cart_item )
 
    {
         items.add( cart_item);
    }
 
-  private void View_cart()
+    private void View_cart()
 
   {
 

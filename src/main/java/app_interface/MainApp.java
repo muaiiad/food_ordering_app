@@ -16,21 +16,19 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login_portal.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("review/reviews.fxml"));
         Scene scene = new Scene(root);
-        String css = getClass().getResource("login.css").toExternalForm();
-        scene.getStylesheets().add(css);
         //hello
         //123
         stage.setTitle("Food Ordering App");
         stage.setScene(scene);
         stage.show();
-
     }
 
     public static void main(String[] args) {
+        FileManager.readFiles();
         launch(args);
-//        FileManager.readIntoAdmins();
+
 //
 //        for (Admin adm: AccountsManager.getAdmins()) {
 //            System.out.println(adm.getEmail());
