@@ -21,7 +21,7 @@ public class MainApp extends Application {
         //hello
         //123
         stage.setTitle("Food Ordering App");
-        stage.setScene(scene);
+        stage.setScene(scene);//
         stage.show();
     }
 
