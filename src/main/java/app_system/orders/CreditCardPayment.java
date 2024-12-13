@@ -10,7 +10,7 @@ package app_system.orders;
 
         public CreditCardPayment(double amount, String paymentMethod, int transactionID,
                                  String cardNumber, String cardHolderName, String expiryDate, String cvv) {
-            super(amount, paymentMethod, transactionID);
+            super(amount, "Credit Card", transactionID);
             this.cardNumber = cardNumber;
             this.cardHolderName = cardHolderName;
             this.expiryDate = expiryDate;

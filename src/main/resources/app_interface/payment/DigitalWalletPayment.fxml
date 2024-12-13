@@ -3,11 +3,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12">
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="app_interface.DigitalWalletController">
     <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Digital Wallet Payment" />
 
-    <TextField promptText="Wallet ID" />
-    <PasswordField promptText="Password" />
+    <TextField fx:id="walletIDField" promptText="Wallet ID(@)" />
+    <TextField fx:id="walletProviderField" promptText="Wallet Provider()" />
 
-    <Button style="-fx-background-color: #E65A43; -fx-text-fill: white;" text="Pay Now" />
+    <Button fx:id="confirmButton" text="Complete Payment" onAction="#handleConfirm"/>
+    <Button fx:id="backButton" text="Back" onAction="#handleBack" style="-fx-background-color: #E65A43; -fx-text-fill: white;" />
 </VBox>

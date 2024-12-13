@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12">
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="app_interface.CreditCardController">
     <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Credit Card Payment" />
 
-    <TextField promptText="Card Number" />
-    <TextField promptText="Cardholder Name" />
-    <PasswordField promptText="CVV" />
-    <DatePicker promptText="Expiry Date" />
+    <TextField fx:id="cardNumber" promptText="Card Number" />
+    <TextField fx:id="cardHolderName" promptText="Card Holder Name" />
+    <PasswordField fx:id="cvv" promptText="CVV" />
+    <DatePicker fx:id="expiryDate" promptText="Expiry Date" />
+    <Label fx:id="errorMessage" text="" style="-fx-text-fill: red;" />
 
-    <Button style="-fx-background-color: #E65A43; -fx-text-fill: white;" text="Pay Now" />
+    <Button text="Complete Payment" onAction="#handleConfirm"/>
+    <Button text="Back" onAction="#handleBack" style="-fx-background-color: #E65A43; -fx-text-fill: white;" />
 </VBox>

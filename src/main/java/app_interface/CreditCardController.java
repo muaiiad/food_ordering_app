@@ -2,6 +2,7 @@ package app_interface;
 
 import app_system.orders.CreditCardPayment;
 import app_system.orders.PaymentProcessor;
+import app_system.restaurants.Menu_Item;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -36,9 +37,17 @@ public class CreditCardController {
         String cvvText = cvv.getText();
         String expiryDateText = expiryDate.getValue() != null ? expiryDate.getValue().toString() : "";
 
-        int transactionID = new Random().nextInt(100000);
+        if (cardNumberText.isEmpty() || cardHolderNameText.isEmpty() || cvvText.isEmpty() || expiryDateText == null) {
+            errorMessage.setText("Please fill all the fields.");
+            return;
+        }
+
+        PaymentProcessor paymentProcessor = new PaymentProcessor();
+//        double amount = paymentProcessor.calculateAmount(selectedItem);
+        int transactionID = paymentProcessor.generateTransactionID();
+
         CreditCardPayment payment = new CreditCardPayment(
-                0.0,
+                5.5f,
                 "Credit Card",
                 transactionID,
                 cardNumberText,
@@ -58,7 +67,7 @@ public class CreditCardController {
 
     @FXML
     private void handleBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("payment/Payment.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
         Stage stage = (Stage) cardNumber.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

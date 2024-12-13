@@ -1,17 +1,19 @@
 package app_interface;
 
-import app_system.orders.CreditCardPayment;
+import app_system.orders.DebitCardPayment;
 import app_system.orders.PaymentProcessor;
+import app_system.restaurants.Menu_Item;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 import java.util.Random;
+
 public class DebitCardController {
+
     @FXML
     private TextField cardNumber;
 
@@ -34,10 +36,18 @@ public class DebitCardController {
         String cvvText = cvv.getText();
         String expiryDateText = expiryDate.getValue() != null ? expiryDate.getValue().toString() : "";
 
-        int transactionID = new Random().nextInt(100000);
-        CreditCardPayment payment = new CreditCardPayment(
-                0.0,
-                "Credit Card",
+        if (cardNumberText.isEmpty() || cardHolderNameText.isEmpty() || cvvText.isEmpty() || expiryDateText == null) {
+            errorMessage.setText("Please fill all the fields.");
+            return;
+        }
+
+        PaymentProcessor paymentProcessor = new PaymentProcessor();
+//        double amount = paymentProcessor.calculateAmount(selectedItem);
+        int transactionID = paymentProcessor.generateTransactionID();
+
+        DebitCardPayment payment = new DebitCardPayment(
+                5.5f,
+                "Debit Card",
                 transactionID,
                 cardNumberText,
                 cardHolderNameText,
@@ -56,7 +66,7 @@ public class DebitCardController {
 
     @FXML
     private void handleBack() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("payment/Payment.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
         Stage stage = (Stage) cardNumber.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.show();

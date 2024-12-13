@@ -1,34 +1,24 @@
 package app_system.orders;
 import app_system.restaurants.Menu_Item;
-
 import java.util.Random;
 
 public class PaymentProcessor {
 
-        private double amount;
-        private int transactionID;
-
-        public void calculateAmount(Menu_Item selectedItem) {
-            if (selectedItem != null) {
-                amount = selectedItem.getPrice();
-                generateTransactionID();
-                System.out.println("Amount calculated: $" + amount);
-                System.out.println("Transaction ID: " + transactionID);
-            } else {
-                System.out.println("Item not found.");
-            }
-        }
-
-        public void generateTransactionID() {
-            Random random = new Random();
-            transactionID = 100000 + random.nextInt(900000);
-        }
-
-        public double getAmount() {
+    public double calculateAmount(Menu_Item selectedItem) {
+        if (selectedItem != null) {
+            double amount = selectedItem.getPrice();
+            System.out.println("Amount calculated: $" + amount);
             return amount;
+        } else {
+            System.out.println("Item not found.");
+            return 0.0;
         }
+    }
 
-        public int getTransactionID() {
-            return transactionID;
-        }
+    public int generateTransactionID() {
+        int transactionID = new Random().nextInt(100000);
+        System.out.println("Generated Transaction ID: " + transactionID);
+        return transactionID;
+    }
 }
+
