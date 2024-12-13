@@ -40,12 +40,6 @@ public class DashboardItemController {
         parentController.refreshMenuList();
     }
 
-    @FXML
-    void selectCurrent(MouseEvent event) {
-
-
-    }
-
     public void setParentController(RestaurantDashboardController parentController) {
         this.parentController = parentController;
     }

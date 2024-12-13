@@ -7,8 +7,6 @@ public class Rest_review extends Review{
 
     public Rest_review(User reviewer, int rate,Restaurant reviewed) {
         super(reviewer, rate);
-
-       reviewed.rest_reviews[reviewed.review_index]=rate;
     }
 
 
