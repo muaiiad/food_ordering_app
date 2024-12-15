@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
@@ -24,6 +25,8 @@ public class menu_viewController {
     private GridPane grid;
     private int CurrentX;
     private int CurrentY;
+    @FXML
+    private Label nameofres;
     @FXML
     void addTOgrid(ActionEvent event) throws IOException
     { FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu_item.fxml"));
@@ -46,5 +49,6 @@ public class menu_viewController {
 
 
     }
+
 
 }
