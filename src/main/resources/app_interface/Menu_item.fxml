@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="161.0" prefWidth="300.0" style="-fx-background-image: C:\Users\Dell\OneDrive\Desktop\fresh-orange-juice-with-fruits-isolated-on-white-background-organic-food-free-space-for-text-wide-photo-2RFXNPN.jpg;">
+         <children>
+            <ImageView fx:id="img" fitHeight="156.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="5.0" top="5.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../../../../../../OneDrive/Desktop/a10038b2-6674-43ef-8149-f8b21718c926--2018-0907_roys-3-ingredient-soy-steak-sauce-genius_3x2_ty-mecham_001.jpg" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 10;" text="+" translateX="-40.0" translateY="120.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <Label fx:id="dishName" prefHeight="30.0" prefWidth="177.0" text="label">
+         <VBox.margin>
+            <Insets left="10.0" top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="disc" alignment="TOP_LEFT" prefHeight="35.0" prefWidth="286.0" text="labelllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll&#10;labelllllllllllllllllllllllllllllll &#10;labell&#10;&#10;" textFill="#333332c4">
+         <VBox.margin>
+            <Insets left="10.0" top="5.0" />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="price" prefHeight="18.0" prefWidth="66.0" text="price" textFill="#484848cf">
+         <VBox.margin>
+            <Insets left="10.0" top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</VBox>

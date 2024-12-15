@@ -11,5 +11,5 @@ public class RestaurantManager {
 
     public static ArrayList<Restaurant> getRestaurants() {
         return restaurants;
-    }//
+    }
 }
