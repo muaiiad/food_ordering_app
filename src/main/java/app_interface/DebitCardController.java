@@ -61,6 +61,10 @@ public class DebitCardController {
         } else {
             errorMessage.setText("Processing completed successfully.");
             errorMessage.setStyle("-fx-text-fill: green;");
+            cardNumber.clear();
+            cardHolderName.clear();
+            cvv.clear();
+            expiryDate.setValue(null);
         }
     }
 

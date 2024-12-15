@@ -5,9 +5,9 @@
 <VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="app_interface.DebitCardController">
     <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Debit Card Payment" />
 
-    <TextField fx:id="cardNumber" promptText="Card Number" />
+    <TextField fx:id="cardNumber" promptText="Card Number(16 numbers)" />
     <TextField fx:id="cardHolderName" promptText="Card Holder Name" />
-    <PasswordField fx:id="cvv" promptText="CVV" />
+    <PasswordField fx:id="cvv" promptText="CVV(3 numbers)" />
     <DatePicker fx:id="expiryDate" promptText="Expiry Date" />
     <Label fx:id="errorMessage" text="" style="-fx-text-fill: red;" />
 

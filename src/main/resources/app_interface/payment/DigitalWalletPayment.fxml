@@ -3,12 +3,19 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="app_interface.DigitalWalletController">
+<VBox alignment="CENTER" spacing="15" style="-fx-padding: 20;"
+      xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="app_interface.DigitalWalletController">
+
     <Label style="-fx-font-size: 20; -fx-font-weight: bold;" text="Digital Wallet Payment" />
 
-    <TextField fx:id="walletIDField" promptText="Wallet ID(@)" />
-    <TextField fx:id="walletProviderField" promptText="Wallet Provider()" />
+    <TextField fx:id="walletIDField" promptText="Wallet ID(should contain @)" />
+    <TextField fx:id="walletProviderField" promptText="Wallet Provider(PayPal or Google Pay)" />
 
-    <Button fx:id="confirmButton" text="Complete Payment" onAction="#handleConfirm"/>
+    <!-- Label to display messages -->
+    <Label fx:id="messageLabel" style="-fx-text-fill: red;"/>
+
+    <Button fx:id="confirmButton" text="Complete Payment" onAction="#handleConfirm" />
     <Button fx:id="backButton" text="Back" onAction="#handleBack" style="-fx-background-color: #E65A43; -fx-text-fill: white;" />
 </VBox>
+

@@ -9,9 +9,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-import java.util.Random;
 
 public class CreditCardController {
 
@@ -62,6 +60,10 @@ public class CreditCardController {
         } else {
             errorMessage.setText("Processing completed successfully.");
             errorMessage.setStyle("-fx-text-fill: green;");
+            cardNumber.clear();
+            cardHolderName.clear();
+            cvv.clear();
+            expiryDate.setValue(null);
         }
     }
 
