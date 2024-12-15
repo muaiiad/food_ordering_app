@@ -2,34 +2,24 @@ package app_interface;
 
 import app_system.restaurants.Restaurant;
 import app_system.restaurants.RestaurantManager;
+import app_system.accounts.User;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Stop;
 
-import java.awt.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
-import static java.util.Locale.filter;
-
-import static java.util.stream.StreamSupport.stream;
 
 public class restaurant_viewController {
     @FXML
-    Button under10$Btn;
-    @FXML
-    Button over4starBtn;
-    @FXML
-    ComboBox priceBtn;
+    ComboBox<String> priceBtn;
     @FXML
     TextField search;
     @FXML
@@ -37,11 +27,21 @@ public class restaurant_viewController {
     @FXML
     Label numOfResult;
     @FXML
+    Label addressLabel;
+    @FXML
     GridPane grid;
+    @FXML
+    ToggleButton over4Stars;
+
+
+    User currentUser;
+
+
 
     @FXML
     public void initialize() throws IOException {
-
+        numOfResult.setText(RestaurantManager.getRestaurants().size() + " results");
+        priceBtn.setItems(FXCollections.observableArrayList("$","$$","$$$"));
         for (Restaurant name : RestaurantManager.getRestaurants()) {
             additem(name);
         }
@@ -50,13 +50,10 @@ public class restaurant_viewController {
     }
 
 
+    public void setCurrentUser(User currentUser) {
+        this.currentUser = currentUser;
 
-
-    public void restaurant_view() throws IOException {
-
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("restaurant_view.fxml"));
-        Parent root = loader.load();
+        addressLabel.setText(currentUser.getDeliveryAddress());
     }
 
     private int counterx = 0;
@@ -64,7 +61,7 @@ public class restaurant_viewController {
 
     public void additem(Restaurant res) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("item_view.fxml"));
+        loader.setLocation(getClass().getResource("restaurant_view/item_view.fxml"));
         AnchorPane item = loader.load();
         item_viewCotroller controller = loader.getController();
         controller.setdata(res);
@@ -80,7 +77,8 @@ public class restaurant_viewController {
         String lowerCaseQuery = search.toLowerCase();
         return
                 (ArrayList<Restaurant>) RestaurantManager.getRestaurants().stream()
-                        .filter(restaurant -> restaurant.getNameRes().toLowerCase().contains(lowerCaseQuery))
+                        .filter(r -> r.getNameRes().toLowerCase().contains(lowerCaseQuery))
+                        .filter(r -> r.getRating() > (over4Stars.isSelected() ? 4 : 0))
                         .collect(Collectors.toList());
     }
 

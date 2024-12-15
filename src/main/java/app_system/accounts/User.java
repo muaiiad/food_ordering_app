@@ -1,6 +1,4 @@
 
-
-
 package app_system.accounts;
 
 import app_system.orders.Cart;
@@ -8,26 +6,29 @@ import app_system.orders.Cart;
 import java.util.ArrayList;
 
 public class User extends Account {
-    ArrayList<String> deliveryAddresses;
-    Cart cart;
+    String deliveryAddress;
+    Cart cart = new Cart();
 
 
+    public User() {
 
-    public User(String email, String username, String password, ArrayList<String> deliveryAddresses) {
+    }
+
+    public User(String email, String username, String password, String deliveryAddress) {
         super(email, username, password);
-        this.deliveryAddresses = deliveryAddresses;
+        this.deliveryAddress = deliveryAddress;
     }
 
     public User(String email, String username, String password) {
         super(email, username, password);
     }
 
-    public ArrayList<String> getDeliveryAddresses() {
-        return deliveryAddresses;
+    public String getDeliveryAddress() {
+        return deliveryAddress;
     }
 
-    public void setDeliveryAddresses(ArrayList<String> deliveryAddresses) {
-        this.deliveryAddresses = deliveryAddresses;
+    public void setDeliveryAddresses(String deliveryAddress) {
+        this.deliveryAddress = deliveryAddress;
     }
 
     public Cart getCart() {

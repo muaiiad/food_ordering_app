@@ -1,18 +1,19 @@
 package app_system.restaurants;
 
+import app_system.orders.Review;
+
+import java.util.ArrayList;
+
 public class Menu_Item {
     private String name;
     private String description;
     private float price;
     private String options;
     private float rating;
+    private ArrayList<Review> reviews;
 
     public Menu_Item() {
     }
-
-    public  int[] reviews;
-    public int counter_reviews=0;
-    public  int review_index = 0;
 
 
     public Menu_Item(String name, String description, float price, String options) {
@@ -46,30 +47,6 @@ public class Menu_Item {
         this.options = options;
     }
 
-    public int[] getReviews() {
-        return reviews;
-    }
-
-    public void setReviews(int[] reviews) {
-        this.reviews = reviews;
-    }
-
-    public int getCounter_reviews() {
-        return counter_reviews;
-    }
-
-    public void setCounter_reviews(int counter_reviews) {
-        this.counter_reviews = counter_reviews;
-    }
-
-    public int getReview_index() {
-        return review_index;
-    }
-
-    public void setReview_index(int review_count) {
-        this.review_index = review_count;
-    }
-
     public float getPrice() {
         return price;
     }
@@ -79,4 +56,19 @@ public class Menu_Item {
     }
 
 
+    public ArrayList<Review> getReviews() {
+        return reviews;
+    }
+
+    public void setReviews(ArrayList<Review> reviews) {
+        this.reviews = reviews;
+    }
+
+    public float getRating() {
+        return rating;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
 }

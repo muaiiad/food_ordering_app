@@ -1,6 +1,6 @@
 package app_system.accounts;
 
-public class Account {
+public abstract class Account {
     protected String email;
     protected String username;
     protected String password;

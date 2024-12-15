@@ -5,7 +5,7 @@
 
 }
 .fillter-container Button {
-    -fx-background-color: #D3D3D3;
+    -fx-background-color: #E0E0E0;
     -fx-text-fill: "Black";
     -fx-font-weight: bold;
     -fx-font-size: 1.2em;
@@ -13,12 +13,27 @@
     -fx-border-radius: 6px;
 }
 .fillter-container ComboBox {
-    -fx-background-color: #D3D3D3;
+    -fx-background-color: #E0E0E0;
     -fx-text-fill: "Black";
     -fx-font-weight: bold;
     -fx-font-size: 1.2em;
     -fx-background-radius: 20px;
     -fx-border-radius: 20px;
+}
+.fillter-container ToggleButton {
+    -fx-background-color: #E0E0E0;
+    -fx-text-fill: "Black";
+    -fx-font-weight: bold;
+    -fx-font-size: 1.2em;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+}
+.fillter-container ToggleButton:selected {
+    -fx-background-color: #CBCBCB;
+}
+.fillter-container ToggleButton:hover, .fillter-container ComboBox:hover, .fillter-container Button:hover {
+    -fx-background-color: #CBCBCB;
+
 }
 .image{
     -fx-background-radius: 20px;

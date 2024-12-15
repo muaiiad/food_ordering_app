@@ -8,6 +8,10 @@ public class Cart {
     private Date createdDate;
     private float totalPrice=0;
 
+    public Cart() {
+
+    }
+
     public ArrayList<Cart_Item> getItems() {
         return items;
     }
@@ -32,7 +36,7 @@ public class Cart {
         this.totalPrice = totalPrice;
     }
 
-    private Cart(ArrayList<Cart_Item> items, Date createdDate, float totalPrice) {
+    public Cart(ArrayList<Cart_Item> items, Date createdDate, float totalPrice) {
         this.items = items;
         this.createdDate = createdDate;
         this.totalPrice = totalPrice;

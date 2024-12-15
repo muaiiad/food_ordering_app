@@ -8,6 +8,7 @@ module com.team.food_ordering_app {
     requires java.desktop;
 
     opens app_interface to javafx.fxml;
+    opens app_system.accounts to com.fasterxml.jackson.databind;
     exports app_interface;
     exports app_system.accounts;
     exports app_system.orders;

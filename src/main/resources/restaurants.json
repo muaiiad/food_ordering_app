@@ -25,7 +25,24 @@
         }
       ]
     },
-    "rating": 4.5
+    "rating": 3.5,
+    "reviews": [
+      {
+        "reviewer" : {"username": "First Reviewer"},
+        "rate": 5,
+        "text": "The burgers are juicy and packed with flavor, and the cake is heavenly. I had the chocolate fudge—it’s a must-try! Great spot overall."
+      },
+      {
+        "reviewer" : {"username": "Second Reviewer"},
+        "rate": 3,
+        "text": "The cheeseburger was delicious, but the cake didn’t wow me. Still worth a visit for the savory options."
+      },
+      {
+        "reviewer" : {"username": "Second Reviewer"},
+        "rate": 3,
+        "text": "Burgers and cake done right! Everything was fresh and tasty, especially the red velvet cake. Highly recommend!"
+      }
+    ]
   },
   {
     "nameRes": "Ocean Breeze Seafood",

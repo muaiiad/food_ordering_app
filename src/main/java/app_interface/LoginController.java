@@ -37,6 +37,18 @@ public class LoginController {
             if (emailField.getText().equals(usr.getEmail()) && passwordField.getText().equals(usr.getPassword())) {
                 authorized = true;
                 //switch scene
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("restaurant_view/restaurant_view.fxml"));
+                Parent pane = loader.load();
+                restaurant_viewController controller = loader.getController();
+                controller.setCurrentUser(usr);
+
+
+                Scene scn = new Scene(pane);
+                Stage stg = (Stage) ((Node)event.getSource()).getScene().getWindow();
+                stg.setScene(scn);
+                stg.show();
+                break;
+
             }
         }
 
@@ -46,7 +58,7 @@ public class LoginController {
                 System.out.println(emailField.getText());
                 authorized = true;
                 //switch scene
-                Parent pane = FXMLLoader.load(getClass().getResource("admin_dashboard.fxml"));
+                Parent pane = FXMLLoader.load(getClass().getResource("adm/admin_dashboard.fxml"));
                 Scene scn = new Scene(pane);
                 Stage stg = (Stage) ((Node)event.getSource()).getScene().getWindow();
                 stg.setScene(scn);

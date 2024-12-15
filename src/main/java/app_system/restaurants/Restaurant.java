@@ -1,6 +1,5 @@
 package app_system.restaurants;
 
-import app_system.orders.Rest_review;
 import app_system.orders.Review;
 
 import java.io.File;
@@ -13,16 +12,16 @@ public class Restaurant {
     private Menu menu;
     private File imgFile;
     private float rating;
-    private ArrayList<Rest_review> reviews;
+    private ArrayList<Review> reviews;
 
     public Restaurant() {
     }
 
-    public ArrayList<Rest_review> getReviews() {
+    public ArrayList<Review> getReviews() {
         return reviews;
     }//
 
-    public void setReviews(ArrayList<Rest_review> reviews) {
+    public void setReviews(ArrayList<Review> reviews) {
         this.reviews = reviews;//
     }
 
