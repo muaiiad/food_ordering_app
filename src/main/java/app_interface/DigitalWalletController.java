@@ -67,7 +67,7 @@ public class DigitalWalletController {
     // Method to handle Back button click
     @FXML
     private void handleBack(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("Payment.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("payment/payment.fxml"));
         Stage stage = (Stage) backButton.getScene().getWindow();
         stage.setScene(new Scene(root));
         stage.setTitle("Payment");
