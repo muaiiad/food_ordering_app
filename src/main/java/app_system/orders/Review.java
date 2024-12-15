@@ -5,9 +5,9 @@ import app_system.restaurants.Restaurant;
 import java.util.Scanner;
 //abstract class
 public class Review {
-   private User reviewer;
-   private int rate;
-   private String text;
+    private User reviewer;
+    private int rate;
+    private String text;
 
     public Review() {
     }
