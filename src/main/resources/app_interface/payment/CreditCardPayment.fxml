@@ -11,6 +11,6 @@
     <DatePicker fx:id="expiryDate" promptText="Expiry Date" />
     <Label fx:id="errorMessage" text="" style="-fx-text-fill: red;" />
 
-    <Button text="Complete Payment" onAction="#handleConfirm"/>
+    <Button text="Complete Payment" onAction="#handleCompletePayment" />
     <Button text="Back" onAction="#handleBack" style="-fx-background-color: #E65A43; -fx-text-fill: white;" />
 </VBox>
