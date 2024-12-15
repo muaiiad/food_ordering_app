@@ -10,7 +10,7 @@ public class DebitCardPayment extends Payment {
 
     public DebitCardPayment(double amount, String paymentMethod, int transactionID,
                             String cardNumber, String cardHolderName, String expiryDate, String cvv) {
-        super(amount, paymentMethod, transactionID);
+        super(amount, "Debit Card", transactionID);
         this.cardNumber = cardNumber;
         this.cardHolderName = cardHolderName;
         this.expiryDate = expiryDate;

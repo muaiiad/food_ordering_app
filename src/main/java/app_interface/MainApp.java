@@ -16,12 +16,12 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("review/reviews.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("adm/admin_dashboard.fxml"));
         Scene scene = new Scene(root);
         //hello
         //123
         stage.setTitle("Food Ordering App");
-        stage.setScene(scene);
+        stage.setScene(scene);//
         stage.show();
     }
 

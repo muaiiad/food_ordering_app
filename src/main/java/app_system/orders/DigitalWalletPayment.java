@@ -6,7 +6,7 @@ public class DigitalWalletPayment extends Payment {
     private String walletID;
 
     public DigitalWalletPayment(double amount, String paymentMethod, int transactionID, String walletProvider, String walletID) {
-        super(amount, paymentMethod, transactionID);
+        super(amount, "Digital Wallet", transactionID);
         this.walletProvider = walletProvider;
         this.walletID = walletID;
     }
