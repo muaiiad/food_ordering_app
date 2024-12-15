@@ -25,30 +25,34 @@ public class menu_viewController {
     private GridPane grid;
     private int CurrentX;
     private int CurrentY;
-    @FXML
-    private Label nameofres;
-    @FXML
-    void addTOgrid(ActionEvent event) throws IOException
-    { FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu_item.fxml"));
-        VBox MYbox = loader.load();
-        Menu_itemController controller = loader.getController();
+//    @FXML
+//    private Label nameofres;
 
-        if( CurrentX>1)
-        {
-            CurrentX=0;
-            CurrentY++;
-        }
-        grid.add(MYbox,CurrentX++,CurrentY);
+    @FXML
+    public void initialize() throws IOException {
+        addTOgrid();
+    }
 
-        for (Menu_Item item: app_system.restaurants.RestaurantManager.getRestaurants().get(0).getMenu().getItems())
-        {
-            controller.setLabel(item.getName(),item.getDescription(),item.getPrice());
+    @FXML
+    void addTOgrid() throws IOException {
+        for (Menu_Item item : app_system.restaurants.RestaurantManager.getRestaurants().get(0).getMenu().getItems()) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Menu_item.fxml"));
+            VBox MYbox = loader.load();
+            Menu_itemController controller = loader.getController();
+
+            if (CurrentX >2) {
+                CurrentX = 0;
+                CurrentY++;
+            }
+
+            controller.setLabel(item.getName(), item.getDescription(), item.getPrice());
+            grid.add(MYbox, CurrentX++, CurrentY);
 
 
         }
 
 
     }
-
-
 }
+
+

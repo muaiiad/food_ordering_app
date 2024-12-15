@@ -16,7 +16,7 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("adm/admin_dashboard.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("menu_view.fxml"));
         Scene scene = new Scene(root);
         //hello
         //123

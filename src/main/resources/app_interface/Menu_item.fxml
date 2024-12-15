@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="272.0" prefWidth="290.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.Menu_itemController">
    <children>
-      <HBox prefHeight="161.0" prefWidth="300.0" style="-fx-background-image: C:\Users\Dell\OneDrive\Desktop\fresh-orange-juice-with-fruits-isolated-on-white-background-organic-food-free-space-for-text-wide-photo-2RFXNPN.jpg;">
+      <HBox prefHeight="161.0" prefWidth="300.0" >
          <children>
             <ImageView fx:id="img" fitHeight="156.0" fitWidth="270.0" pickOnBounds="true" preserveRatio="true">
                <HBox.margin>

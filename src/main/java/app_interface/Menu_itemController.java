@@ -3,6 +3,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
+import java.io.IOException;
+
 
 public class Menu_itemController {
 
@@ -12,8 +14,8 @@ public class Menu_itemController {
     private Label price;
     @FXML
     private Label disc;
-    @FXML
-    private Image img;
+//    @FXML
+//    private Image img;
 
     public void setLabel ( String name , String dis, float pr)
     {
