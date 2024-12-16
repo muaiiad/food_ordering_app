@@ -12,9 +12,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="629.0" prefWidth="337.0" style="-fx-background-radius: 15; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.DishSelectionController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="337.0" style="-fx-background-radius: 15; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.DishSelectionController">
    <children>
-      <Label layoutX="100.0" layoutY="200.0" prefHeight="55.0" prefWidth="210.0" text="Label">
+      <Label fx:id="itemName" layoutX="100.0" layoutY="200.0" prefHeight="55.0" prefWidth="210.0" text="Label">
          <VBox.margin>
             <Insets left="10.0" top="30.0" />
          </VBox.margin>
@@ -22,7 +22,7 @@
             <Font name="Berlin Sans FB Demi Bold" size="21.0" />
          </font>
       </Label>
-      <Label alignment="TOP_LEFT" prefHeight="73.0" prefWidth="390.0" text="Label&#10;label&#10;label&#10;label&#10;&#10;" textFill="#595656de">
+      <Label fx:id="itemDis" alignment="TOP_LEFT" prefHeight="73.0" prefWidth="390.0" text="Label&#10;label&#10;label&#10;label&#10;&#10;" textFill="#595656de">
          <VBox.margin>
             <Insets bottom="10.0" left="10.0" top="10.0" />
          </VBox.margin>
@@ -32,7 +32,7 @@
             <Insets left="10.0" right="10.0" />
          </VBox.margin>
          <image>
-            <Image url="@../../../../../../OneDrive/Desktop/classic-french-seafood-dishes-hero-img.png" />
+            <Image url="@-cheeseburger.jpg" />
          </image></ImageView>
       <Label prefHeight="18.0" prefWidth="175.0" text="Label">
          <VBox.margin>
@@ -80,7 +80,7 @@
             <Insets left="10.0" />
          </VBox.margin>
       </VBox>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="330.0" style="-fx-border-radius: 900; -fx-background-color: #E65A43; -fx-background-radius: 50;" text="Make 1 required selection -$price" textFill="#f7f2f2">
+      <Button fx:id="itemPrice" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="330.0" style="-fx-border-radius: 900; -fx-background-color: #E65A43; -fx-background-radius: 50;" text="Make 1 required selection -$price" textFill="#f7f2f2">
          <VBox.margin>
             <Insets left="5.0" />
          </VBox.margin>
