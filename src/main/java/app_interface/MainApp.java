@@ -27,12 +27,12 @@ public class MainApp extends Application {
         User user=new User("shroul@","shrouk","1233fvxz");
         User user2=new User("menna@","menna","1233fvxz");
         User user3=new User("mohamed@","mohamed","1233fvxz");
-        controller.setvalue(user.getUsername(),user.getUsername().split("")[0],"rest1","hello my new meal",4);
-        //123
-        controller.setvalue2(user2.getUsername(),user2.getUsername().split("")[0],"rest2","hello my new meal",5);
-        //123
-        controller.setvalue3(user3.getUsername(),user3.getUsername().split("")[0],"rest3","hello my new meal",3);
-        //123
+//        controller.setvalue(user.getUsername(),user.getUsername().split("")[0],"rest1","hello my new meal",4);
+//        //123
+//        controller.setvalue2(user2.getUsername(),user2.getUsername().split("")[0],"rest2","hello my new meal",5);
+//        //123
+//        controller.setvalue3(user3.getUsername(),user3.getUsername().split("")[0],"rest3","hello my new meal",3);
+//        //123
         Scene scene = new Scene(root);
         stage.setTitle("Food Ordering App");
         stage.setScene(scene);//
