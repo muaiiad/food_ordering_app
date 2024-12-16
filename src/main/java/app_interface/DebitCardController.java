@@ -40,7 +40,7 @@ public class DebitCardController {
         }
 
         PaymentProcessor paymentProcessor = new PaymentProcessor();
-        //        double amount = paymentProcessor.calculateAmount(selectedItem);
+//        double amount = paymentProcessor.calculateAmount();
         int transactionID = paymentProcessor.generateTransactionID();
 
         DebitCardPayment payment = new DebitCardPayment(

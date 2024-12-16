@@ -42,6 +42,7 @@ public class DigitalWalletController {
 
         PaymentProcessor paymentProcessor = new PaymentProcessor();
         int transactionID = paymentProcessor.generateTransactionID();
+        //        double amount = paymentProcessor.calculateAmount(selectedItem);
         double amount = 100.0;
 
         DigitalWalletPayment payment = new DigitalWalletPayment(

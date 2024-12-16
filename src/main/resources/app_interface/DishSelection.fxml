@@ -80,7 +80,7 @@
             <Insets left="10.0" />
          </VBox.margin>
       </VBox>
-      <Button alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="330.0" style="-fx-border-radius: 900; -fx-background-color: #E65A43; -fx-background-radius: 50;" text="Make 1 required selection -$price" textFill="#f7f2f2">
+      <Button  fx:id="orderButton" alignment="CENTER" mnemonicParsing="false" prefHeight="32.0" prefWidth="330.0" style="-fx-border-radius: 900; -fx-background-color: #E65A43; -fx-background-radius: 50;" text="Make 1 required selection -$price" textFill="#f7f2f2" onAction="#goToPaymentPage">
          <VBox.margin>
             <Insets left="5.0" />
          </VBox.margin>

@@ -41,7 +41,7 @@ public class CreditCardController {
         }
 
         PaymentProcessor paymentProcessor = new PaymentProcessor();
-//        double amount = paymentProcessor.calculateAmount(selectedItem);
+//        double amount = paymentProcessor.calculateAmount();
         int transactionID = paymentProcessor.generateTransactionID();
 
         CreditCardPayment payment = new CreditCardPayment(
