@@ -17,7 +17,7 @@ public class PaymentProcessor {
 
     public int generateTransactionID() {
         int transactionID = new Random().nextInt(100000);
-        System.out.println("Generated Transaction ID: " + transactionID);
+        System.out.println("Payment process Transaction ID: " + transactionID);
         return transactionID;
     }
 }

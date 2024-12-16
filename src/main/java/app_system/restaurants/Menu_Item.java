@@ -22,7 +22,6 @@ public class Menu_Item {
         this.price = price;
         this.options = options;
     }
-
     public String getName() {
         return name;//
     }

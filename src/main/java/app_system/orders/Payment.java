@@ -1,7 +1,5 @@
 package app_system.orders;
 
-import app_system.restaurants.Menu_Item;
-
 public abstract class Payment {
 
     private double amount;

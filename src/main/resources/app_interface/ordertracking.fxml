@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app_interface.OrderTrackingController">
+    <!-- حاوية الـ VBox التي تحتوي على قائمة الطلبات -->
+    <VBox fx:id="orderContainer" alignment="CENTER" layoutX="50" layoutY="20" prefWidth="500" spacing="10">
+
+        <!-- صف عنوان لكل عمود -->
+        <HBox spacing="20" style="-fx-border-color: #E65A43; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: black;">
+            <Label prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text="Delivery Address" />
+            <Label prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text="Restaurant" />
+            <Label prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text="Total Price" />
+            <Label prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text="Status" />
+        </HBox>
+
+        <HBox spacing="20" style="-fx-border-color: #E65A43; -fx-border-width: 2; -fx-padding: 10; -fx-background-color: black;">
+            <Label fx:id="addressValue" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text=""/>
+            <Label fx:id="restaurantValue" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text=""/>
+            <Label fx:id="totalPriceValue" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text=""/>
+            <Label fx:id="statusValue" prefWidth="100" style="-fx-font-weight: bold; -fx-text-fill: orange;" text=""/>
+        </HBox>
+    </VBox>
+</AnchorPane>
+
+

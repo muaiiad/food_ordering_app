@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 
 public class Order {
-
+    private String order_status;
     private  User customer;
     private Restaurant restaurant;
     private ArrayList <Cart_Item> order_items;
@@ -15,7 +15,8 @@ public class Order {
     private Payment payment_info;
 
 
-    public Order(User customer, Restaurant restaurant, ArrayList<Cart_Item> order_items,Payment payment_info){
+    public Order(String order_status,User customer, Restaurant restaurant, ArrayList<Cart_Item> order_items,Payment payment_info){
+//        this.order_status=order_status;
         this.customer=customer;
         this.restaurant=restaurant;
         this.order_items=order_items;
@@ -27,6 +28,10 @@ public class Order {
         this.deliveryAddress=deliveryAddress;
         this.deliverytime=deliverytime;
 
+    }
+
+    public String getOrderStatus() {
+        return order_status;
     }
 
     public User getCustomer(){
@@ -69,6 +74,8 @@ public class Order {
     public void setCustomer(User customer) {
         this.customer= customer;
     }
-
+    public void setOrder_status(String order_status){
+        this.order_status= order_status;
+    }
 
 }

@@ -7,7 +7,6 @@ package app_system.orders;
         private String expiryDate;
         private String cvv;
 
-
         public CreditCardPayment(double amount, String paymentMethod, int transactionID,
                                  String cardNumber, String cardHolderName, String expiryDate, String cvv) {
             super(amount, "Credit Card", transactionID);

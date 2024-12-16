@@ -60,10 +60,6 @@ public class Cart {
     private void View_cart()
 
   {
-
       System.out.printf("Total Price= %.2f $",totalPrice);
   }
-
-
-
 }
