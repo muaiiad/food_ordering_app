@@ -6,11 +6,6 @@ import app_system.accounts.AccountsManager;
 import app_system.accounts.Admin;
 import app_system.accounts.User;
 import app_system.filemanager.FileManager;
-import app_system.orders.Cart;
-import app_system.orders.Cart_Item;
-import app_system.restaurants.Menu;
-import app_system.restaurants.Menu_Item;
-import app_system.restaurants.RestaurantManager;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,15 +17,22 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 //        Parent root = FXMLLoader.load(getClass().getResource("menu_view.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("Cart/MainCheckout.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("menu_view.fxml"));
         Parent root = loader.load();
 
-        for (Menu_Item mn: RestaurantManager.getRestaurants().get(0).getMenu().getItems()) {
-            AccountsManager.getUsers().get(0).getCart().getItems().add(new Cart_Item(mn,1));
-        }
 
 
 
+        menu_viewController controller=loader.getController();
+        User user=new User("shroul@","shrouk","1233fvxz");
+        User user2=new User("menna@","menna","1233fvxz");
+        User user3=new User("mohamed@","mohamed","1233fvxz");
+        controller.setvalue(user.getUsername(),user.getUsername().split("")[0],"rest1","hello my new meal",4);
+        //123
+        controller.setvalue2(user2.getUsername(),user2.getUsername().split("")[0],"rest2","hello my new meal",5);
+        //123
+        controller.setvalue3(user3.getUsername(),user3.getUsername().split("")[0],"rest3","hello my new meal",3);
+        //123
         Scene scene = new Scene(root);
         stage.setTitle("Food Ordering App");
         stage.setScene(scene);//

@@ -1,9 +1,11 @@
 package app_system.restaurants;
 
+import java.io.File;
 import java.util.ArrayList;
 
 public class Menu {
     private ArrayList<Menu_Item> items;
+    private File imgFile;
 
     public Menu() {
     }
