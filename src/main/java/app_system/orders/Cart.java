@@ -4,7 +4,7 @@ import java.util.*;
 
 //-------CART CLASS-------//
 public class Cart {
-    private ArrayList<Cart_Item> items;
+    private ArrayList<Cart_Item> items = new ArrayList<Cart_Item>();
     private Date createdDate;
     private float totalPrice=0;
 

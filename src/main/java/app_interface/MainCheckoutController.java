@@ -17,7 +17,7 @@ import app_system.accounts.AccountsManager;
 public class MainCheckoutController {
 
     @FXML
-    private HBox cartlist;
+    private VBox cartlist;
 
     @FXML
     ImageView photores;
@@ -31,10 +31,10 @@ public class MainCheckoutController {
 
 
         for (Cart_Item cartItem : AccountsManager.getUsers().get(0).getCart().getItems()) {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Cart/Cart_Item.fxml"));
-            AnchorPane item = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Cart/Cart_Item.fxml"));
+            HBox item = loader.load();
 
-            MainCheckoutController itemController = loader.getController();
+            CartItemController itemController = loader.getController();
 
             itemController.setData(cartItem);
             cartlist.getChildren().add(item);
@@ -45,13 +45,7 @@ public class MainCheckoutController {
         }
     }
 
-    public void setData(Cart_Item cartItem) {
 
-        name.setText(cartItem.getMenu_item().getName());
-        description.setText(cartItem.getMenu_item().getDescription());
-        price.setText("$" + cartItem.getMenu_item().getPrice());
-        options.setText(cartItem.getMenu_item().getOptions());
-    }
 
 }
 

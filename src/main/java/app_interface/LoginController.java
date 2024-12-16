@@ -24,6 +24,10 @@ public class LoginController {
     @FXML
     private Button loginButton;
 
+    public void TYPE() {
+        System.out.println("I NEED HELP!!!!! HELP ME!!!!");
+    }
+
     public void switchToSignUpPage(ActionEvent event) throws IOException {
         Stage stage = (Stage) ( ((Node)event.getSource()) .getScene().getWindow() );
         Scene scene = new Scene(FXMLLoader.load(getClass().getResource("signup_portal.fxml")));

@@ -13,6 +13,7 @@ public class Order {
     private ArrayList <Cart_Item> order_items;
     private String deliveryAddress,deliverytime;
     private Payment payment_info;
+    private String status;
 
 
     public Order(String order_status,User customer, Restaurant restaurant, ArrayList<Cart_Item> order_items,Payment payment_info){
