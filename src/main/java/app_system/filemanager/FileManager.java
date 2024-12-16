@@ -22,6 +22,9 @@ public class FileManager {
             AccountsManager.setUsers(objectMapper.readValue(new File("src/main/resources/users.json"), new TypeReference<ArrayList<User>>() {}));
             RestaurantManager.setRestaurants(objectMapper.readValue(new File("src/main/resources/restaurants.json"), new TypeReference<ArrayList<Restaurant>>() {}));
 
+            for (int i = 0;i<RestaurantManager.getRestaurants().size();i++) {
+                RestaurantManager.getRestaurants().get(i).setImgFile(new File("src/main/resources/restaurant" + i + ".png"));
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
